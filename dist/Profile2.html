@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg" sizes="32x32" href="./image/logo.png">
+  <title>profile</title>
+  <link rel="stylesheet" href="Profile2.css">
+  <script src="bundle.js" defer></script>
+</head>
+
+<body id="profile_page2">
+
+
+  <div class="profile-page2">
+    <header class="header">
+      <a href="main2.html" target="_blank" id="main ">
+        <img class="logo-m" src="./image/logo.png" alt="Fresh Start Logo" />
+    </a>
+      <ul class="nav-links">
+        <li><img width="20px" height="20px" src="./image/house-solid.svg" />
+          <a href="community-2.html" id="community-text">Community</a>
+        </li>
+        <li><img width="20px" height="20px" src="./image/display-solid.svg" />
+          <a href="work.html" id="work-text">Work</a>
+        </li>
+        <li><img width="20px" height="20px" src="./image/leaf-solid.svg" />
+          <a href="volunteer.html" id="volunteer-text">Volunteer</a>
+        </li>
+        <li><img width="20px" height="20px" src="./image/hand-holding-medical-solid.svg" />
+          <a href="health.html" id="health-text">Health</a>
+        </li>
+        <li><img width="20px" height="20px" src="./image/user-regular.svg" />
+          <a href="Profile.html" id="profile-text">Profile</a>
+        </li>
+        <li><img width="20px" height="20px" src="./image/envelope-solid.svg" />
+          <a href="message.html" id="message-text">Message</a>
+        </li>
+        <li><img width="20px" height="20px" src="./image/gamepad-solid.svg" />
+          <a href="games.html" id="games-text">Games</a>
+        </li>
+        <li><img width="20px" height="20px" src="./image/robot-solid.svg" />
+          <a href="public/AI.html" id="ai-text">AI Fresh Start</a>
+        </li>
+        <li><img width="20px" height="20px" src="./image/form.png" />
+          <a href="forms.html" id="forms-text">Forms</a>
+        </li>
+
+      </ul>
+      <div class="navbar-mobile">
+        <button class="menu-icon">
+          <img width="20px" height="20px" src="./image/bars-menu.svg" />
+        </button>
+        <div class="navbar-list">
+          <ul>
+            <li><img width="20px" height="20px" src="./image/house-solid.svg" />
+              <a href="community-2.html" id="community-textm">Community</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/display-solid.svg" />
+              <a href="work.html" id="work-textm">Work</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/leaf-solid.svg" />
+              <a href="volunteer.html" id="volunteer-textm">Volunteer</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/hand-holding-medical-solid.svg" />
+              <a href="health.html" id="health-textm">Health</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/user-regular.svg" />
+              <a href="Profile.html" id="profile-textm">Profile</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/envelope-solid.svg" />
+              <a href="message.html" id="message-textm">Message</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/gamepad-solid.svg" />
+              <a href="games.html" id="games-textm">Games</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/robot-solid.svg" />
+              <a href="public/AI.html" id="ai-textm">AI Fresh Start</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/form.png" />
+              <a href="forms.html" id="forms-textm">Forms</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="icons">
+       
+        <img id="language-icon" width="20px" height="20px" src="./image/earth-americas-solid.svg" />
+
+        <div id="language-dropdown" class="language-dropdown">
+          <button id="change-lang-en">English</button>
+          <button id="change-lang-ar">عربي</button>
+        </div>
+      </div>
+      <div class="navbar-container">
+        <div class="search-section">
+          <img class="profile-picc" src="./image/circle-user-regular.svg" alt="Profile Picture"
+            onclick="toggleProfileMenu()" />
+
+        </div>
+      </div>
+
+      <div id="profile-menu" class="profile-menu hidden">
+        <div class="profile-header">
+          <img class="profile-pic-large" src="./image/circle-user-regular.svg" alt="Profile Picture">
+          <span>null</span>
+
+        </div>
+
+        <ul>
+          <li><img width="20px" height="20px" src="./image/gear-solid.svg" /> <a href="settingsprivacy.html"
+            id="settings-privacy">Settings & privacy</a></li>
+    <li><img width="20px" height="20px" src="./image/circle-question-solid.svg" /><a href="helpsuport.html"
+            id="help-support">Help & support</a> </li>
+          <li id="display-accessibility" class="accessibility-toggle"><img width="20px" height="20px"
+              src="./image/moon-solid.svg" /><span id="display-accessibility-text">Display & accessibility</span>
+            <ul id="theme-options" class="theme-options hidden">
+              <li><button id="light-mode">Off </button></li>
+              <li><button id="dark-mode">On </button></li>
+            </ul>
+          </li>
+
+          <li><img width="20px" height="20px" src="./image/right-from-bracket-solid.svg" /> <span id="log-out">Log
+              Out</span></li>
+        </ul>
+      </div>
+    </header>
+
+
+    <section class="profile-info">
+      <div class="username">Display name</div>
+      <div class="profile-pic-container">
+        <img src="./image/loading.gif" alt="Profile Picture" class="profile-pic2">
+      </div>
+      <div class="stats">
+        <div class="posts">
+          <span id="post-number"></span><br>
+          <span id="posts-text">Posts</span>
+        </div>
+        <div class="followers">
+          <span id="followers-number">0</span><br>
+          <span id="followers-text">Followers</span>
+        </div>
+        <div class="following">
+          <span id="following-number">0</span><br>
+          <span id="following-text">Following</span>
+        </div>
+      </div>
+      <div class="profile-name" id="profile-name">First and last name</div>
+      <div class="description" id="profile-description">description</div>
+      <div class="actions">
+        <button class="message-button" id="share-profile-btn">Share Profile</button>
+      </div>
+    </section>
+
+    <section class="no-posts">
+      <div id="post-content"></div>
+    </section>
+
+
+  </div>
+
+  <div class="main" id="main">
+    <div class="postcard2">
+      <p class="description"> ... </p>
+      <img class="post_media" src=./image/loading.gif alt="post image" />
+      <div class="reacts">
+        <button class="react-box">
+            <img width="20px" height="20px" src="./image/heart-regular.svg" alt="like" /><span
+                id="likeu">Like</span>
+        </button>
+        <button id="comment-btn" class="react-box">
+            <img width="20px" height="20px" src="./image/comment-dots-regular.svg" alt="comment " /> <span
+                id="commentu"> Comment</span>
+        </button>
+        <button class="react-box">
+            <img width="20px" height="20px" src="./image/share-from-square-regular.svg" alt="share" /> <span
+                id="shareu">Share</span>
+        </button>
+        
+    </div>
+    </div>
+  </div>
+
+  <div class="blurr">
+  </div>
+
+
+  
+  <div class="main3">
+    <div class="postcard3">
+      <div class="user-name">
+        <img src="./image/loading.gif" alt="Profile logo" />
+        <p>Username</p>
+      </div>
+      <p class="description2" disabled>...</p>
+      <img height="65%" width="100%" class="post_media3" src=./image/loading.gif alt="post image" />
+      <video height="65%" width="100%" class="post_media3" controls alt="post image"></video>
+      
+    </div>
+
+    <div class="comments2" id="comments2">
+      <div class="no_comments" id="no_comments2">
+        <h2>No comments</h2>
+      </div>
+    </div>
+
+    <img class="close_btn" width="30px" height="30px" src="./image/close-lg-svgrepo-com.svg" />
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">
+        <a href="main2.html" target="_blank" id="main ">
+            <img class="logo-m" src="./image/logo.png" alt="Fresh Start Logo" />
+        </a>
+        <h3>About Our Website</h3>
+        <p>Our website aims to empower Palestinian retirees by providing job opportunities, social networking, and
+            various services.</p>
+    </div>
+    <div class="social-links">
+        <h3>Contact Us</h3>
+
+        <a href="https://www.facebook.com/share/18qFb2vq4D/?mibextid=wwXIfr" target="_blank" id="facebook-link">
+            <img width="30px" height="30px" src="./image/facebok.svg" alt="Facebook" />
+        </a>
+        <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Ffreshstart711%3Figsh%3DMTZ4OGMyb3E0MXNnOA%253D%253D%26utm_source%3Dqr%26fbclid%3DIwZXh0bgNhZW0CMTAAAR2r0fx9LLiAzqsMO1X7RsCbayOU10VS6YNh9kW02dlbFE-3lXSLDHBPyVI_aem_gN11Kb32_B0vahI5hJynFQ&h=AT3aD1DlPBrs-KThdG7kMpUs5n5eu0flzb0EfGOEsPV4X7pppwo8vPtRckDf3dtXcyrGtHFhcmepicZb3BXEt7wQlGHLBuPpgQSc89QjqDyMrrBaNjRWa3U2zJT9Oa5ZO6tgWg" target="_blank" id="instagram-link">
+            <img width="30px" height="30px" src="./image/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" id="linkedin-link">
+            <img width="30px" height="30px" src="./image/linkedin.svg" alt="LinkedIn" />
+        </a>
+    </div>
+    <div class="feedback">
+        <p>Your opinion matters to us! Tell us how we can improve our services</p>
+        <button id="feedback-btn" onclick="showFeedbackForm()">Feedback</button>
+        <div id="feedback-form" class="hidden">
+            <textarea placeholder="Write your feedback here..."></textarea>
+            <button onclick="submitFeedback()">Submit</button>
+        </div>
+    </div>
+</footer>
+
+
+  <div class="make_comment_tab">
+    <h3 class="comment_title" id="comment_title">Comment text:</h3>
+    <textarea class="comment_text2" placeholder="text" id="placeholdert"></textarea>
+
+    <button class="make_comment_btn" id="make_comment_btn">Comment</button>
+    <button class="make_comment_cancel" id="make_comment_cancel">Cancel</button>
+  </div>
+
+  <div class="loading">
+    <img height="45%" width="30%" src="image/loading.gif">
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/i18next@21.0.2/i18next.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/i18next-xhr-backend@3.2.0/i18nextXHRBackend.min.js"></script>
+
+  <script>
+    i18next.init({
+      lng: 'en',
+      resources: {
+        en: {
+          translation: {
+            "header": {
+              "community": "Community",
+              "work": "Work",
+              "volunteer": "Volunteer",
+              "health": "Health",
+              "profile": "Profile",
+              "message": "Message",
+              "games": "Games",
+              "ai": "AI Fresh Start",
+              "forms": "Forms",
+              "settings-privacy": "Settings & privacy",
+              "help-support": "Help & support",
+              "display-accessibility-text": "Display & accessibility",
+              "light-mode": "Off",
+              "dark-mode": "On",
+              "log-out": "Log Out"
+            },
+            "navbar-list": {
+              "community": "Community",
+              "work": "Work",
+              "volunteer": "Volunteer",
+              "health": "Health",
+              "profile": "Profile",
+              "message": "Message",
+              "games": "Games",
+              "ai": "AI Fresh Start",
+              "forms": "Forms"
+            },
+            "profile-info": {
+              "posts-text": " Posts",
+              "followers-text": "Followers",
+              "following-text": "Following",
+              "profile-description": "Description",
+              "share-profile-btn": "Share Profile",
+              "signout-btn": "Sign out"
+            },
+            "make_comment_tab": {
+                            "comment_title": "Comment text",
+                            "placeholdert": "text",
+                            "make_comment_btn": "Comment",
+                            "make_comment_cancel": "Cancel"
+                        },
+
+
+            "footer": {
+              "about_title": "About Our Website",
+              "about_text": "Our website aims to empower Palestinian retirees by providing job opportunities, social networking, and various services.",
+              "contact_title": "Contact Us",
+              "facebook_alt": "Facebook",
+              "instagram_alt": "Instagram",
+              "linkedin_alt": "LinkedIn",
+              "feedback_text": "Your opinion matters to us! Tell us how we can improve our services",
+              "feedback_btn": "Feedback",
+              "feedback_placeholder": "Write your feedback here...",
+              "feedback_submit_btn": "Submit"
+            }
+
+
+          }
+
+        },
+        ar: {
+          translation: {
+            "header": {
+              "community": "المجتمع",
+              "work": "العمل",
+              "volunteer": "التطوع",
+              "health": "الصحة",
+              "profile": "الملف الشخصي",
+              "message": "الرسائل",
+              "games": "الألعاب",
+              "ai": "الذكاء الاصطناعي",
+              "forms": "نماذج",
+              "settings-privacy": "الإعدادات والخصوصية",
+              "help-support": "المساعدة والدعم",
+              "display-accessibility-text": "العرض وإمكانية الوصول",
+              "light-mode": "إيقاف",
+              "dark-mode": "تشغيل",
+              "log-out": "تسجيل الخروج"
+            },
+            "navbar-list": {
+              "community": "المجتمع",
+              "work": "العمل",
+              "volunteer": "التطوع",
+              "health": "الصحة",
+              "profile": "الملف الشخصي",
+              "message": "الرسائل",
+              "games": "الألعاب",
+              "ai": "الذكاء الاصطناعي",
+             "forms": "نماذج"
+            },
+            "profile-info": {
+              "posts-text": "منشورات",
+              "followers-text": "متابعون",
+              "following-text": "متابعة",
+              "profile-description": "الوصف",
+
+              "share-profile-btn": "مشاركة الملف الشخصي",
+
+            },
+            "make_comment_tab": {
+                            "comment_title": "نص التعليق:",
+                            "placeholdert": "النص",
+                            "make_comment_btn": "تعليق",
+                            "make_comment_cancel": "إلغاء"
+                        },
+
+            "footer": {
+              "about_title": "عن موقعنا",
+              "about_text": "يهدف موقعنا إلى تمكين المتقاعدين الفلسطينيين من خلال توفير فرص عمل، والتواصل الاجتماعي، وخدمات متنوعة.",
+              "contact_title": "اتصل بنا",
+              "facebook_alt": "فيسبوك",
+              "instagram_alt": "إنستجرام",
+              "linkedin_alt": "لينكدإن",
+              "feedback_text": "رأيك مهم بالنسبة لنا! أخبرنا كيف يمكننا تحسين خدماتنا",
+              "feedback_btn": "ملاحظات",
+              "feedback_placeholder": "اكتب ملاحظاتك هنا...",
+              "feedback_submit_btn": "إرسال"
+            }
+          }
+        }
+      }
+    }, function (err, t) {
+      if (err) {
+        console.error('Error loading translations:', err);
+        console.log(i18next.t('make_post_tab.post-desc-title'));
+
+
+
+      } else {
+        updateContent();
+        console.log(i18next.t('profile-info.post-text'));
+      }
+
+    });
+
+    function updateContent() {
+      document.getElementById('community-text').textContent = i18next.t('header.community');
+      document.getElementById('work-text').textContent = i18next.t('header.work');
+      document.getElementById("volunteer-text").textContent = i18next.t('header.volunteer');
+      document.getElementById("health-text").textContent = i18next.t('header.health');
+      document.getElementById("profile-text").textContent = i18next.t('header.profile');
+      document.getElementById("message-text").textContent = i18next.t('header.message');
+      document.getElementById("games-text").textContent = i18next.t('header.games');
+      document.getElementById("ai-text").textContent = i18next.t('header.ai');
+      document.getElementById("forms-text").textContent = i18next.t('header.forms');
+      document.getElementById('settings-privacy').textContent = i18next.t('header.settings-privacy');
+      document.getElementById('help-support').textContent = i18next.t('header.help-support');
+      document.getElementById('display-accessibility-text').textContent = i18next.t('header.display-accessibility-text');
+      document.getElementById('light-mode').textContent = i18next.t('header.light-mode');
+      document.getElementById('dark-mode').textContent = i18next.t('header.dark-mode');
+
+      document.getElementById('log-out').textContent = i18next.t('header.log-out');
+      document.getElementById('followers-text').textContent = i18next.t('profile-info.followers-text');
+      document.getElementById('following-text').textContent = i18next.t('profile-info.following-text');
+      document.getElementById('profile-description').textContent = i18next.t('profile-info.profile-description');
+      document.getElementById('share-profile-btn').textContent = i18next.t('profile-info.share-profile-btn');
+
+      document.querySelector('.footer .footer-logo h3').textContent = i18next.t('footer.about_title');
+      document.querySelector('.footer .footer-logo p').textContent = i18next.t('footer.about_text');
+      document.querySelector('.footer .social-links h3').textContent = i18next.t('footer.contact_title');
+
+
+      document.getElementById('facebook-link').querySelector('img').alt = i18next.t('footer.facebook_alt');
+      document.getElementById('instagram-link').querySelector('img').alt = i18next.t('footer.instagram_alt');
+      document.getElementById('linkedin-link').querySelector('img').alt = i18next.t('footer.linkedin_alt');
+
+
+      document.querySelector('.footer .feedback p').textContent = i18next.t('footer.feedback_text');
+      document.getElementById('feedback-btn').textContent = i18next.t('footer.feedback_btn');
+      document.querySelector('.footer .feedback textarea').placeholder = i18next.t('footer.feedback_placeholder');
+      document.querySelector('.footer .feedback button').textContent = i18next.t('footer.feedback_submit_btn');
+     
+
+
+      document.getElementById('community-textm').textContent = i18next.t('navbar-list.community');
+      document.getElementById('work-textm').textContent = i18next.t('navbar-list.work');
+      document.getElementById("volunteer-textm").textContent = i18next.t('navbar-list.volunteer');
+      document.getElementById("health-textm").textContent = i18next.t('navbar-list.health');
+      document.getElementById("profile-textm").textContent = i18next.t('navbar-list.profile');
+      document.getElementById("message-textm").textContent = i18next.t('navbar-list.message');
+      document.getElementById("games-textm").textContent = i18next.t('navbar-list.games');
+      document.getElementById("ai-textm").textContent = i18next.t('navbar-list.ai');
+      document.getElementById("forms-textm").textContent = i18next.t('navbar-list.forms');
+      document.getElementById('posts-text').textContent = i18next.t('profile-info.posts-text');
+      document.getElementById('comment_title').textContent = i18next.t('make_comment_tab.comment_title');
+            document.getElementById('placeholdert').setAttribute('placeholder', i18next.t('make_comment_tab.placeholdert'));
+            document.getElementById('make_comment_btn').textContent = i18next.t('make_comment_tab.make_comment_btn');
+            document.getElementById('make_comment_cancel').textContent = i18next.t('make_comment_tab.make_comment_cancel');
+
+      if (i18next.language === 'ar') {
+        document.body.classList.add('rtl');
+        document.body.classList.remove('ltr');
+        document.getElementById('language-dropdown').classList.add('rtl'); 
+        document.getElementById('language-dropdown').classList.remove('ltr');
+
+      } else {
+        document.body.classList.add('ltr');
+        document.body.classList.remove('rtl');
+        document.getElementById('language-dropdown').classList.add('ltr'); // إضافة فئة ltr للقائمة
+        document.getElementById('language-dropdown').classList.remove('rtl');
+      }
+
+    }
+
+
+    document.getElementById('language-icon').addEventListener('click', function () {
+      const dropdown = document.getElementById('language-dropdown');
+      dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+    });
+
+    document.getElementById('change-lang-en').addEventListener('click', function () {
+      i18next.changeLanguage('en', updateContent);
+      document.getElementById('language-dropdown').style.display = 'none';
+    });
+
+    document.getElementById('change-lang-ar').addEventListener('click', function () {
+      i18next.changeLanguage('ar', updateContent);
+      document.getElementById('language-dropdown').style.display = 'none';
+    });
+
+    function showFeedbackForm() {
+      document.getElementById("feedback-form").classList.toggle("hidden");
+      document.getElementById("feedback-btn").classList.add("hidden");
+    }
+
+    function submitFeedback() {
+      alert("Thank you for your feedback!");
+      document.getElementById("feedback-form").classList.add("hidden");
+      document.getElementById("feedback-btn").classList.remove("hidden");
+
+    }
+    function toggleProfileMenu() {
+      const menu = document.getElementById('profile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    document.addEventListener('click', (event) => {
+      const menu = document.getElementById('profile-menu');
+      const profilePic = document.querySelector('.profile-picc');
+      if (!menu.contains(event.target) && event.target !== profilePic) {
+        menu.classList.add('hidden');
+      }
+    });
+    const accessibilityMenu = document.querySelector(".accessibility-toggle");
+    const themeOptions = document.querySelector(".theme-options");
+    accessibilityMenu.addEventListener("click", () => {
+      themeOptions.classList.toggle("hidden");
+    });
+    const lightModeButton = document.getElementById("light-mode");
+    const darkModeButton = document.getElementById("dark-mode");
+
+
+    if (localStorage.getItem("theme") === "light") {
+      document.body.style.background = "var(--background-light)";
+      document.body.style.color = "var(--text-light)";
+
+    } else {
+      document.body.style.background = "var(--background-dark)";
+      document.body.style.color = "var(--text-dark)";
+
+    }
+    lightModeButton.addEventListener("click", () => {
+      document.body.style.background = "var(--background-light)";
+      document.body.style.color = "var(--text-light)";
+
+
+
+      localStorage.setItem("theme", "light");
+      themeOptions.classList.add("hidden");
+    });
+
+
+    darkModeButton.addEventListener("click", () => {
+      document.body.style.background = "var(--background-dark)";
+      document.body.style.color = "var(--text-dark)";
+
+
+      localStorage.setItem("theme", "dark");
+      themeOptions.classList.add("hidden");
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" sizes="32x32" href="./image/logo.png">
+    <title>Games for Retirees</title>
+    <link rel="stylesheet" href="./games.css" />
+    <script src="bundle.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="main2.html" target="_blank" id="main ">
+            <img class="logo-m" src="./image/logo.png" alt="Fresh Start Logo" />
+        </a>
+        
+        <ul class="nav-links">
+            <li><img width="20px" height="20px" src="./image/house-solid.svg" />
+                <a href="community-2.html" id="community-text">Community</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/display-solid.svg" />
+                <a href="work.html" id="work-text">Work</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/leaf-solid.svg" />
+                <a href="volunteer.html" id="volunteer-text">Volunteer</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/hand-holding-medical-solid.svg" />
+                <a href="health.html" id="health-text">Health</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/user-regular.svg" />
+                <a href="Profile.html" id="profile-text">Profile</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/envelope-solid.svg" />
+                <a href="message.html" id="message-text">Message</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/gamepad-solid.svg" />
+                <a href="games.html" id="games-text">Games</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/robot-solid.svg" />
+                <a href="public/AI.html" id="ai-text">AI Fresh Start</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/form.png" />
+                <a href="forms.html" id="forms-text">Forms</a>
+            </li>
+
+        </ul>
+        <div class="navbar-mobile">
+            <button class="menu-icon">
+                <img width="20px" height="20px" src="./image/bars-menu.svg" />
+            </button>
+            <div class="navbar-list">
+                <ul>
+                    <li><img width="20px" height="20px" src="./image/house-solid.svg" />
+                        <a href="community-2.html" id="community-textm">Community</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/display-solid.svg" />
+                        <a href="work.html" id="work-textm">Work</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/leaf-solid.svg" />
+                        <a href="volunteer.html" id="volunteer-textm">Volunteer</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/hand-holding-medical-solid.svg" />
+                        <a href="health.html" id="health-textm">Health</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/user-regular.svg" />
+                        <a href="Profile.html" id="profile-textm">Profile</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/envelope-solid.svg" />
+                        <a href="message.html" id="message-textm">Message</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/gamepad-solid.svg" />
+                        <a href="games.html" id="games-textm">Games</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/robot-solid.svg" />
+                        <a href="public/AI.html" id="ai-textm">AI Fresh Start</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/form.png" />
+                        <a href="forms.html" id="forms-textm">Forms</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="icons">
+            
+            <img id="language-icon" width="20px" height="20px" src="./image/earth-americas-solid.svg" />
+
+            <div id="language-dropdown" class="language-dropdown">
+                <button id="change-lang-en">English</button>
+                <button id="change-lang-ar">عربي</button>
+            </div>
+        </div>
+        <div class="navbar-container">
+            <div class="search-section">
+                <img width="20px" height="20px" class="profile-pic" src="./image/circle-user-regular.svg"
+                    alt="Profile Picture" onclick="toggleProfileMenu()" />
+
+            </div>
+        </div>
+
+        <div id="profile-menu" class="profile-menu hidden">
+            <div class="profile-header">
+                <a href="Profile.html" target="_blank" id="Profile ">
+                    <img class="profile-pic-large" src="./image/circle-user-regular.svg"  alt="Profile Picture">
+                </a>
+                <span>null</span>
+
+            </div>
+
+            <ul>
+                <li><img width="20px" height="20px" src="./image/gear-solid.svg" /> <a href="settingsprivacy.html"
+                        id="settings-privacy">Settings & privacy</a></li>
+                <li><img width="20px" height="20px" src="./image/circle-question-solid.svg" /><a href="helpsuport.html"
+                        id="help-support">Help & support</a> </li>
+                <li id="display-accessibility" class="accessibility-toggle"><img width="20px" height="20px"
+                        src="./image/moon-solid.svg" /> <span id="display-accessibility-text">Display &
+                        accessibility</span>
+                    <ul id="theme-options" class="theme-options hidden">
+                        <li><button id="light-mode">Off </button></li>
+                        <li><button id="dark-mode">On </button></li>
+                    </ul>
+                </li>
+
+                <li><img width="20px" height="20px" src="./image/right-from-bracket-solid.svg" /><span id="log-out">Log
+                        Out</span></li>
+            </ul>
+        </div>
+    </header>
+    <section class="games-container">
+        
+        <div class="intro">
+            <h1 id="introTitle">Welcome to Fun Time!</h1>
+            <p id="introDescription">Discover fun and engaging games just for you!</p>
+        </div>
+        <div class="all-cards">
+            <div class="game-card">
+                <img src="./image/soliraire.png" alt="Classic Solitaire">
+                <h2 id="titlec">Classic Solitaire</h2>
+                <p id="descriptionc">Relax and unwind with this timeless card game.</p>
+                <a href="https://games.sixtyandme.com/games/classic-solitaire" target="_blank" class="play-btn"
+                    id="play_buttonc">Play Now</a>
+            </div>
+            <div class="game-card">
+                <img src="./image/chess.png" alt="Chess">
+                <h2 id="titlech">Chess</h2>
+                <p id="descriptionch">Challenge your strategic thinking with chess.</p>
+                <a href="https://games.sixtyandme.com/games/chess" target="_blank" class="play-btn"
+                    id="play_buttonch">Play Now</a>
+            </div>
+            <div class="game-card">
+                <img src="./image/crosswords.png" alt="Crosswords">
+                <h2 id="titlep"> Penny Dell Crosswords</h2>
+                <p id="descriptionp">Improve your vocabulary with crosswords.</p>
+                <a href="https://games.sixtyandme.com/games/penny-dell-crossword" target="_blank" class="play-btn"
+                    id="play_buttonp">Play
+                    Now</a>
+            </div>
+            <div class="game-card">
+                <img src="./image/sudoku.png" alt="Sudoku">
+                <h2 id="titles">Sudoku</h2>
+                <p id="descriptions">A classic puzzle game to keep your mind sharp.</p>
+                <a href="https://games.sixtyandme.com/games/sudoku" target="_blank" class="play-btn"
+                    id="play_buttons">Play Now</a>
+            </div>
+            <div class="game-card">
+                <img src="./image/backgammon.png" alt="Backgammon">
+                <h2 id="titleb">Backgammon</h2>
+                <p id="descriptionb">Test your tactics in this classic board game.</p>
+                <a href="https://games.sixtyandme.com/games/backgammon" target="_blank" class="play-btn"
+                    id="play_buttonb">Play Now</a>
+            </div>
+            <div class="game-card">
+                <img src="./image/ballpool.png" alt="8 Ball Pool">
+                <h2 id="titleba">8 Ball Pool</h2>
+                <p id="descriptionba">Show off your skills in this exciting cue sport.</p>
+                <a href="https://games.sixtyandme.com/games/pool" target="_blank" class="play-btn"
+                    id="play_buttonba">Play Now</a>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="main2.html" target="_blank" id="main ">
+                <img class="logo-m" src="./image/logo.png" alt="Fresh Start Logo" />
+            </a>
+            <h3>About Our Website</h3>
+            <p>Our website aims to empower Palestinian retirees by providing job opportunities, social networking, and
+                various services.</p>
+        </div>
+        <div class="social-links">
+            <h3>Contact Us</h3>
+
+            <a href="https://www.facebook.com/share/18qFb2vq4D/?mibextid=wwXIfr" target="_blank" id="facebook-link">
+                <img width="30px" height="30px" src="./image/facebok.svg" alt="Facebook" />
+            </a>
+            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Ffreshstart711%3Figsh%3DMTZ4OGMyb3E0MXNnOA%253D%253D%26utm_source%3Dqr%26fbclid%3DIwZXh0bgNhZW0CMTAAAR2r0fx9LLiAzqsMO1X7RsCbayOU10VS6YNh9kW02dlbFE-3lXSLDHBPyVI_aem_gN11Kb32_B0vahI5hJynFQ&h=AT3aD1DlPBrs-KThdG7kMpUs5n5eu0flzb0EfGOEsPV4X7pppwo8vPtRckDf3dtXcyrGtHFhcmepicZb3BXEt7wQlGHLBuPpgQSc89QjqDyMrrBaNjRWa3U2zJT9Oa5ZO6tgWg" target="_blank" id="instagram-link">
+                <img width="30px" height="30px" src="./image/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" id="linkedin-link">
+                <img width="30px" height="30px" src="./image/linkedin.svg" alt="LinkedIn" />
+            </a>
+        </div>
+        <div class="feedback">
+            <p>Your opinion matters to us! Tell us how we can improve our services</p>
+            <button id="feedback-btn" onclick="showFeedbackForm()">Feedback</button>
+            <div id="feedback-form" class="hidden">
+                <textarea placeholder="Write your feedback here..."></textarea>
+                <button onclick="submitFeedback()">Submit</button>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.0.2/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-xhr-backend@3.2.0/i18nextXHRBackend.min.js"></script>
+    <script>
+        i18next.init({
+            lng: 'en',
+            resources: {
+                en: {
+                    translation: {
+                        "header": {
+                            "community": "Community",
+                            "work": "Work",
+                            "volunteer": "Volunteer",
+                            "health": "Health",
+                            "profile": "Profile",
+                            "message": "Message",
+                            "games": "Games",
+                            "ai": "AI Fresh Start",
+                            "forms": "Forms",
+                            "settings-privacy": "Settings & privacy",
+                            "help-support": "Help & support",
+                            "display-accessibility-text": "Display & accessibility",
+                            "light-mode": "Off",
+                            "dark-mode": "On",
+                            "log-out": "Log Out"
+                        },
+                        "navbar-list": {
+                            "community": "Community",
+                            "work": "Work",
+                            "volunteer": "Volunteer",
+                            "health": "Health",
+                            "profile": "Profile",
+                            "message": "Message",
+                            "games": "Games",
+                            "ai": "AI Fresh Start",
+                            "forms": "Forms"
+                        },
+                         "intro": {
+                            "introTitle": "Welcome to Fun Time!",
+                            "introDescription": "Discover fun and engaging games just for you!"
+                        },
+                        "game-card": {
+
+                            "titlec": "Classic Solitaire",
+                            "titlech": "Chess",
+                            "titlep": "Penny Dell Crosswords",
+                            "titles": "Sudoku",
+                            "titleb": "Backgammon",
+                            "titleba": "8 Ball Pool",
+                            "descriptionc": "Relax and unwind with this timeless card game.",
+                            "descriptionch": "Challenge your strategic thinking with chess.",
+                            "descriptionp": "Improve your vocabulary with crosswords.",
+                            "descriptions": "A classic puzzle game to keep your mind sharp.",
+                            "descriptionb": "Test your tactics in this classic board game.",
+                            "descriptionba": "Show off your skills in this exciting cue sport.",
+                            "play_buttonc": "Play Now",
+                            "play_buttonch": "Play Now",
+                            "play_buttonp": "Play Now",
+                            "play_buttons": "Play Now",
+                            "play_buttonb": "Play Now",
+                            "play_buttonba": "Play Now",
+
+                        },
+
+
+                        "footer": {
+                            "about_title": "About Our Website",
+                            "about_text": "Our website aims to empower Palestinian retirees by providing job opportunities, social networking, and various services.",
+                            "contact_title": "Contact Us",
+                            "facebook_alt": "Facebook",
+                            "instagram_alt": "Instagram",
+                            "linkedin_alt": "LinkedIn",
+                            "feedback_text": "Your opinion matters to us! Tell us how we can improve our services",
+                            "feedback_btn": "Feedback",
+                            "feedback_placeholder": "Write your feedback here...",
+                            "feedback_submit_btn": "Submit"
+                        }
+
+
+                    }
+
+                },
+                ar: {
+                    translation: {
+                        "header": {
+                            "community": "المجتمع",
+                            "work": "العمل",
+                            "volunteer": "التطوع",
+                            "health": "الصحة",
+                            "profile": "الملف الشخصي",
+                            "message": "الرسائل",
+                            "games": "الألعاب",
+                            "ai": "الذكاء الاصطناعي",
+                            "forms": "نماذج",
+                            "settings-privacy": "الإعدادات والخصوصية",
+                            "help-support": "المساعدة والدعم",
+                            "display-accessibility-text": "العرض وإمكانية الوصول",
+                            "light-mode": "إيقاف",
+                            "dark-mode": "تشغيل",
+
+                            "log-out": "تسجيل الخروج"
+                        },
+                        "navbar-list": {
+                            "community": "المجتمع",
+                            "work": "العمل",
+                            "volunteer": "التطوع",
+                            "health": "الصحة",
+                            "profile": "الملف الشخصي",
+                            "message": "الرسائل",
+                            "games": "الألعاب",
+                            "ai": "الذكاء الاصطناعي",
+                            "forms": "نماذج"
+                        },
+                       
+                        "intro": {
+                            "introTitle": " مرحبًا في وقت المرح!",
+                            "introDescription": "اكتشف الألعاب الممتعة والمشوقة فقط من أجلك!"
+                        },
+                        "game-card": {
+
+                            "titlec": "سوليتير كلاسيكي",
+                            "titlech": "شطرنج",
+                            "titlep": "ألغاز الكلمات المتقاطعة",
+                            "titles": "سودوكو",
+                            "titleb": "طاولة الزهر",
+                            "titleba": "8 بول بول",
+                            "descriptionc": "استرخ واستمتع بلعبة الورق الخالدة هذه.",
+                            "descriptionch": "تحدى تفكيرك الاستراتيجي مع الشطرنج.",
+                            "descriptionp": "حسن مفرداتك مع الألغاز المتقاطعة.",
+                            "descriptions": "لعبة ألغاز كلاسيكية للحفاظ على حدة ذهنك.",
+                            "descriptionb": "اختبر تكتيكك في هذه اللعبة اللوحية الكلاسيكية.",
+                            "descriptionba": "استعرض مهاراتك في هذه الرياضة المثيرة للكرة.",
+                            "play_buttonc": "العب الآن",
+                            "play_buttonch": "العب الآن",
+                            "play_buttonp": "العب الآن",
+                            "play_buttons": "العب الآن",
+                            "play_buttonb": "العب الآن",
+                            "play_buttonba": "العب الآن"
+
+                        },
+
+                        "footer": {
+                            "about_title": "عن موقعنا",
+                            "about_text": "يهدف موقعنا إلى تمكين المتقاعدين الفلسطينيين من خلال توفير فرص عمل، والتواصل الاجتماعي، وخدمات متنوعة.",
+                            "contact_title": "اتصل بنا",
+                            "facebook_alt": "فيسبوك",
+                            "instagram_alt": "إنستجرام",
+                            "linkedin_alt": "لينكدإن",
+                            "feedback_text": "رأيك مهم بالنسبة لنا! أخبرنا كيف يمكننا تحسين خدماتنا",
+                            "feedback_btn": "ملاحظات",
+                            "feedback_placeholder": "اكتب ملاحظاتك هنا...",
+                            "feedback_submit_btn": "إرسال"
+                        }
+                    }
+                }
+            }
+        }, function (err, t) {
+            if (err) {
+                console.error('Error loading translations:', err);
+                console.log(i18next.t('make_post_tab.post-desc-title'));
+
+            } else {
+                updateContent();
+            }
+
+        });
+
+        function updateContent() {
+
+            document.getElementById('community-text').textContent = i18next.t('header.community');
+            document.getElementById('work-text').textContent = i18next.t('header.work');
+            document.getElementById("volunteer-text").textContent = i18next.t('header.volunteer');
+            document.getElementById("health-text").textContent = i18next.t('header.health');
+            document.getElementById("profile-text").textContent = i18next.t('header.profile');
+            document.getElementById("message-text").textContent = i18next.t('header.message');
+            document.getElementById("games-text").textContent = i18next.t('header.games');
+            document.getElementById("ai-text").textContent = i18next.t('header.ai');
+            document.getElementById("forms-text").textContent = i18next.t('header.forms');
+            document.getElementById('settings-privacy').textContent = i18next.t('header.settings-privacy');
+            document.getElementById('help-support').textContent = i18next.t('header.help-support');
+            document.getElementById('display-accessibility-text').textContent = i18next.t('header.display-accessibility-text');
+            document.getElementById('light-mode').textContent = i18next.t('header.light-mode');
+            document.getElementById('dark-mode').textContent = i18next.t('header.dark-mode');
+            document.getElementById('log-out').textContent = i18next.t('header.log-out');
+            document.getElementById('community-textm').textContent = i18next.t('navbar-list.community');
+            document.getElementById('work-textm').textContent = i18next.t('navbar-list.work');
+            document.getElementById("volunteer-textm").textContent = i18next.t('navbar-list.volunteer');
+            document.getElementById("health-textm").textContent = i18next.t('navbar-list.health');
+            document.getElementById("profile-textm").textContent = i18next.t('navbar-list.profile');
+            document.getElementById("message-textm").textContent = i18next.t('navbar-list.message');
+            document.getElementById("games-textm").textContent = i18next.t('navbar-list.games');
+            document.getElementById("ai-textm").textContent = i18next.t('navbar-list.ai');
+            document.getElementById("forms-textm").textContent = i18next.t('navbar-list.forms');
+            document.querySelector('.footer .footer-logo h3').textContent = i18next.t('footer.about_title');
+            document.querySelector('.footer .footer-logo p').textContent = i18next.t('footer.about_text');
+            document.querySelector('.footer .social-links h3').textContent = i18next.t('footer.contact_title');
+            document.getElementById('facebook-link').querySelector('img').alt = i18next.t('footer.facebook_alt');
+            document.getElementById('instagram-link').querySelector('img').alt = i18next.t('footer.instagram_alt');
+            document.getElementById('linkedin-link').querySelector('img').alt = i18next.t('footer.linkedin_alt');
+            document.querySelector('.footer .feedback p').textContent = i18next.t('footer.feedback_text');
+            document.getElementById('feedback-btn').textContent = i18next.t('footer.feedback_btn');
+            document.querySelector('.footer .feedback textarea').placeholder = i18next.t('footer.feedback_placeholder');
+            document.querySelector('.footer .feedback button').textContent = i18next.t('footer.feedback_submit_btn');
+          
+            document.getElementById('introTitle').textContent = i18next.t('intro.introTitle');
+            document.getElementById('introDescription').textContent = i18next.t('intro.introDescription');
+            document.getElementById('titlec').textContent = i18next.t('game-card.titlec');
+            document.getElementById('descriptionc').textContent = i18next.t('game-card.descriptionc');
+            document.getElementById('titlech').textContent = i18next.t('game-card.titlech');
+            document.getElementById('descriptionch').textContent = i18next.t('game-card.descriptionch');
+            document.getElementById('titlep').textContent = i18next.t('game-card.titlep');
+            document.getElementById('descriptionp').textContent = i18next.t('game-card.descriptionp');
+            document.getElementById('titles').textContent = i18next.t('game-card.titles');
+            document.getElementById('descriptions').textContent = i18next.t('game-card.descriptions');
+            document.getElementById('titleb').textContent = i18next.t('game-card.titleb');
+            document.getElementById('descriptionb').textContent = i18next.t('game-card.descriptionb');
+            document.getElementById('titleba').textContent = i18next.t('game-card.titleba');
+            document.getElementById('descriptionba').textContent = i18next.t('game-card.descriptionba');
+            document.getElementById('play_buttonc').textContent = i18next.t('game-card.play_buttonc');
+            document.getElementById('play_buttonch').textContent = i18next.t('game-card.play_buttonch');
+            document.getElementById('play_buttonp').textContent = i18next.t('game-card.play_buttonp');
+            document.getElementById('play_buttons').textContent = i18next.t('game-card.play_buttons');
+            document.getElementById('play_buttonb').textContent = i18next.t('game-card.play_buttonb');
+            document.getElementById('play_buttonba').textContent = i18next.t('game-card.play_buttonba');
+
+
+
+
+            if (i18next.language === 'ar') {
+                document.body.classList.add('rtl');
+                document.body.classList.remove('ltr');
+                document.getElementById('language-dropdown').classList.add('rtl');
+                document.getElementById('language-dropdown').classList.remove('ltr');
+
+            } else {
+                document.body.classList.add('ltr');
+                document.body.classList.remove('rtl');
+                document.getElementById('language-dropdown').classList.add('ltr');
+                document.getElementById('language-dropdown').classList.remove('rtl');
+            }
+
+        }
+
+
+        document.getElementById('language-icon').addEventListener('click', function () {
+            const dropdown = document.getElementById('language-dropdown');
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+        });
+
+        document.getElementById('change-lang-en').addEventListener('click', function () {
+            i18next.changeLanguage('en', updateContent);
+            document.getElementById('language-dropdown').style.display = 'none';
+        });
+
+        document.getElementById('change-lang-ar').addEventListener('click', function () {
+            i18next.changeLanguage('ar', updateContent);
+            document.getElementById('language-dropdown').style.display = 'none';
+        });
+        function showFeedbackForm() {
+            document.getElementById("feedback-form").classList.toggle("hidden");
+            document.getElementById("feedback-btn").classList.add("hidden");
+        }
+
+        function submitFeedback() {
+            alert("Thank you for your feedback!");
+            document.getElementById("feedback-form").classList.add("hidden");
+            document.getElementById("feedback-btn").classList.remove("hidden");
+
+        }
+        function toggleProfileMenu() {
+            const menu = document.getElementById('profile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        document.addEventListener('click', (event) => {
+            const menu = document.getElementById('profile-menu');
+            const profilePic = document.querySelector('.profile-pic');
+            if (!menu.contains(event.target) && event.target !== profilePic) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        const accessibilityMenu = document.querySelector(".accessibility-toggle");
+        const themeOptions = document.querySelector(".theme-options");
+        const lightModeButton = document.getElementById("light-mode");
+        const darkModeButton = document.getElementById("dark-mode");
+
+
+        if (localStorage.getItem("theme") === "light") {
+            document.body.style.background = "var(--background-light)";
+            document.body.style.color = "var(--text-light)";
+
+            document.querySelectorAll(".post-box").forEach((box) => {
+                box.style.background = "var(--post-background-light)";
+                box.style.color = "var(--text-light)";
+            });
+        } else {
+            document.body.style.background = "var(--background-dark)";
+            document.body.style.color = "var(--text-dark)";
+
+            document.querySelectorAll(".post-box").forEach((box) => {
+                box.style.background = "var(--post-background-dark)";
+                box.style.color = "var(--text-dark)";
+            });
+        }
+
+        accessibilityMenu.addEventListener("click", () => {
+            themeOptions.classList.toggle("hidden");
+        });
+
+        lightModeButton.addEventListener("click", () => {
+            document.body.style.background = "var(--background-light)";
+            document.body.style.color = "var(--text-light)";
+
+            document.querySelectorAll(".post-box").forEach((box) => {
+                box.style.background = "var(--post-background-light)";
+                box.style.color = "var(--text-light)";
+            });
+
+            localStorage.setItem("theme", "light");
+            themeOptions.classList.add("hidden");
+        });
+
+        darkModeButton.addEventListener("click", () => {
+            document.body.style.background = "var(--background-dark)";
+            document.body.style.color = "var(--text-dark)";
+
+            document.querySelectorAll(".post-box").forEach((box) => {
+                box.style.background = "var(--post-background-dark)";
+                box.style.color = "var(--text-dark)";
+            });
+            localStorage.setItem("theme", "dark");
+            themeOptions.classList.add("hidden");
+        });
+    </script>
+</body>
+
+</html>

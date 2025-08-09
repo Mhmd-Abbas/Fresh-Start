@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" sizes="32x32" href="./image/logooo.png">
+    <title>Forms</title>
+    <link rel="stylesheet" href="feedback.css">
+    <script src="bundle.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo-m" src="./image/logo.png" alt="Fresh Start Logo" />
+        <ul class="nav-links">
+            <li><img width="20px" height="20px" src="./image/house-solid.svg" />
+                <a href="community-2.html" id="community-text">Community</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/display-solid.svg" />
+                <a href="work.html" id="work-text">Work</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/leaf-solid.svg" />
+                <a href="volunteer.html" id="volunteer-text">Volunteer</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/hand-holding-medical-solid.svg" />
+                <a href="health.html" id="health-text">Health</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/user-regular.svg" />
+                <a href="Profile.html" id="profile-text">Profile</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/envelope-solid.svg" />
+                <a href="message.html" id="message-text">Message</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/gamepad-solid.svg" />
+                <a href="games.html" id="games-text">Games</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/robot-solid.svg" />
+                <a href="public/AI.html" id="ai-text">AI Fresh Start</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/form.png" />
+                <a href="forms.html" id="forms-text">Forms</a>
+            </li>
+
+        </ul>
+        <div class="navbar-mobile">
+            <button class="menu-icon">
+                <img width="20px" height="20px" src="./image/bars-menu.svg" />
+            </button>
+            <div class="navbar-list">
+                <ul>
+                    <li><img width="20px" height="20px" src="./image/house-solid.svg" />
+                        <a href="community-2.html" id="community-textm">Community</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/display-solid.svg" />
+                        <a href="work.html" id="work-textm">Work</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/leaf-solid.svg" />
+                        <a href="volunteer.html" id="volunteer-textm">Volunteer</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/hand-holding-medical-solid.svg" />
+                        <a href="health.html" id="health-textm">Health</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/user-regular.svg" />
+                        <a href="Profile.html" id="profile-textm">Profile</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/envelope-solid.svg" />
+                        <a href="message.html" id="message-textm">Message</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/gamepad-solid.svg" />
+                        <a href="games.html" id="games-textm">Games</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/robot-solid.svg" />
+                        <a href="public/AI.html" id="ai-textm">AI Fresh Start</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/form.png" />
+                        <a href="forms.html" id="forms-textm">Forms</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="icons">
+            
+            <img id="language-icon" width="20px" height="20px" src="./image/earth-americas-solid.svg" />
+
+            <div id="language-dropdown" class="language-dropdown">
+                <button id="change-lang-en">English</button>
+                <button id="change-lang-ar">عربي</button>
+            </div>
+
+        </div>
+        <div class="navbar-container">
+            <div class="search-section">
+                <img width="20px" height="20px" class="profile-pic" src="./image/circle-user-regular.svg"
+                    alt="Profile Picture" onclick="toggleProfileMenu()" />
+
+            </div>
+        </div>
+
+        <div id="profile-menu" class="profile-menu hidden">
+            <div class="profile-header">
+                <a href="Profile.html" target="_blank" id="Profile ">
+                    <img class="profile-pic-large" src="./image/circle-user-regular.svg"  alt="Profile Picture">
+                </a>
+                <span>null</span>
+
+            </div>
+
+            <ul>
+                <li><img width="20px" height="20px" src="./image/gear-solid.svg" /> <a href="settingsprivacy.html"
+                        id="settings-privacy">Settings & privacy</a></li>
+                <li><img width="20px" height="20px" src="./image/circle-question-solid.svg" /><a href="helpsuport.html"
+                        id="help-support">Help & support</a> </li>
+                <li id="display-accessibility" class="accessibility-toggle"><img width="20px" height="20px"
+                        src="./image/moon-solid.svg" /> <span id="display-accessibility-text">Display &
+                        accessibility</span>
+                    <ul id="theme-options" class="theme-options hidden">
+                        <li><button id="light-mode">Off </button></li>
+                        <li><button id="dark-mode">On </button></li>
+                    </ul>
+                </li>
+
+                <li><img width="20px" height="20px" src="./image/right-from-bracket-solid.svg" /><span id="log-out">Log
+                        Out</span></li>
+            </ul>
+        </div>
+    </header>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="feedback-section2">
+        <div class="main2">
+            <div class="postcard">
+                <div class="user-name">
+                    <p>Username</p>
+                </div>
+                <p class="description">...</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="main2.html" target="_blank" id="main ">
+                <img class="logo-m" src="./image/logo.png" alt="Fresh Start Logo" />
+            </a>
+            <h3>About Our Website</h3>
+            <p>Our website aims to empower Palestinian retirees by providing job opportunities, social networking, and
+                various services.</p>
+        </div>
+        <div class="social-links">
+            <h3>Contact Us</h3>
+
+            <a href="https://www.facebook.com/share/18qFb2vq4D/?mibextid=wwXIfr" target="_blank" id="facebook-link">
+                <img width="30px" height="30px" src="./image/facebok.svg" alt="Facebook" />
+            </a>
+            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Ffreshstart711%3Figsh%3DMTZ4OGMyb3E0MXNnOA%253D%253D%26utm_source%3Dqr%26fbclid%3DIwZXh0bgNhZW0CMTAAAR2r0fx9LLiAzqsMO1X7RsCbayOU10VS6YNh9kW02dlbFE-3lXSLDHBPyVI_aem_gN11Kb32_B0vahI5hJynFQ&h=AT3aD1DlPBrs-KThdG7kMpUs5n5eu0flzb0EfGOEsPV4X7pppwo8vPtRckDf3dtXcyrGtHFhcmepicZb3BXEt7wQlGHLBuPpgQSc89QjqDyMrrBaNjRWa3U2zJT9Oa5ZO6tgWg" target="_blank" id="instagram-link">
+                <img width="30px" height="30px" src="./image/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" id="linkedin-link">
+                <img width="30px" height="30px" src="./image/linkedin.svg" alt="LinkedIn" />
+            </a>
+        </div>
+        <div class="feedback">
+            <p>Your opinion matters to us! Tell us how we can improve our services</p>
+            <button id="feedback-btn" onclick="showFeedbackForm()">Feedback</button>
+            <div id="feedback-form" class="hidden">
+                <textarea placeholder="Write your feedback here..."></textarea>
+                <button onclick="submitFeedback()">Submit</button>
+            </div>
+        </div>
+    </footer>
+
+    <div class="blurr">
+    </div>
+
+</body>
+
+</html>

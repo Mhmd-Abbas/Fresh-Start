@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" sizes="32x32" href="./image/logo.png">
+    <title >Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="bundle.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-section">
+            <div class="logo">
+                <img src="./image/logooo.png" alt="Logo">
+            </div>
+           
+            <h1 id="welcome">Welcome Back</h1>
+            <form class="login-form" method="post">
+                <label for="email" id="email-label">Email Address</label>
+                <input type="email" id="email" class="email" placeholder="Email Address" required>
+
+                <label for="password" id="password-label">Password</label>
+                <input type="password" id="password"  class="password" placeholder="Password" required>
+
+                <a class="remember-forgot" href="#" id="forgot">Forgot your password?</a>
+
+                <button class="login-button" id="login">Log in</button>
+            </form>
+            <div class="loginp">
+            <p class="signup" id="signup">Don't have an account? </p>
+             <a href="signup.html"  id="signup-a">Sign up</a>
+             </div>
+        </div>
+
+        <div class="illustration-section">
+            <div class="academy">
+                <h3 id="academy-title">Fresh Start</h3>
+                <p id="academy-text">Offers resources and training to help retirees acquire new skills and explore life after retirement,
+                    fostering a greater sense of fulfillment.</p>
+            </div>
+            <div class="illustration">
+                <img src="./image/img.png" alt="Illustration">
+            </div>
+            <div class="icons">
+                <button id="language-button">Translate</button>
+    
+                <div id="language-dropdown" class="language-dropdown">
+                    <button id="change-lang-en">English</button>
+                    <button id="change-lang-ar">عربي</button>
+                </div>
+            </div>
+            <button class="show-login-button" onclick="toggleLogin()">Login</button>
+        </div>
+       
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.0.2/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-xhr-backend@3.2.0/i18nextXHRBackend.min.js"></script>
+
+    <script>
+         i18next.init({
+            lng: 'en',
+            resources: {
+                en: {
+                    translation: {
+                        "container": {
+                            "welcome": "Welcome Back",
+                "email-label": "Email Address",
+                "email": "Email Address",
+                "password-label": "Password",
+               "password":"Password",
+                "forgot": "Forgot your password?",
+                "login": "Log in",
+                "signup": "Don't have an account? ",
+                 "signup-a":"Sign up",
+                "academy-title": "Fresh Start",
+                "academy-text": "Offers resources and training to help retirees acquire new skills and explore life after retirement, fostering a greater sense of fulfillment.",
+                "language-button": "Translate"
+                        }
+                       
+
+
+                    }
+
+                },
+                ar: {
+                    translation: {
+                        "container": {
+                            "welcome": "مرحبًا بك مجددًا",
+                "email-label": "البريد الإلكتروني",
+                "email": "البريد الإلكتروني",
+                "password-label": "كلمة المرور",
+             "password": "كلمة المرور",
+                "forgot": "هل نسيت كلمة المرور؟",
+                "login": "تسجيل الدخول",
+                "signup": "ليس لديك حساب؟ ",
+                    "signup-a":  "اشترك الآن",
+                "academy-title": "بداية جديدة",
+                "academy-text": "يقدم موارد وتدريبات لمساعدة المتقاعدين على اكتساب مهارات جديدة واستكشاف الحياة بعد التقاعد، مما يعزز الشعور بالإنجاز.",
+                "language-button": "ترجمة" 
+                        }
+                     
+                    }
+                }
+            }
+        }, function (err, t) {
+            if (err) {
+                console.error('Error loading translations:', err);
+               
+
+            } else {
+                updateContent();
+            }
+
+        });
+
+        function updateContent() {
+            document.getElementById('welcome').textContent = i18next.t('container.welcome');
+            document.getElementById('email-label').textContent = i18next.t('container.email-label');
+            document.getElementById('password-label').textContent = i18next.t('container.password-label');
+           
+            document.querySelector('.container .email').placeholder = i18next.t('container.email');
+            document.querySelector('.container .password').placeholder = i18next.t('container.password');
+            
+
+            document.getElementById('forgot').textContent = i18next.t('container.forgot');
+            document.getElementById('login').textContent = i18next.t('container.login');
+            document.getElementById('signup').textContent = i18next.t('container.signup');
+            document.getElementById('academy-title').textContent = i18next.t('container.academy-title');
+            document.getElementById('academy-text').textContent = i18next.t('container.academy-text');
+            document.getElementById('language-button').textContent = i18next.t('container.language-button');
+            document.getElementById('signup-a').textContent = i18next.t('container.signup-a');
+            document.getElementById('signup').textContent = i18next.t('container.signup');
+           
+
+
+
+
+            if (i18next.language === 'ar') {
+                document.body.classList.add('rtl');
+                document.body.classList.remove('ltr');
+                document.getElementById('language-dropdown').classList.add('rtl'); 
+                document.getElementById('language-dropdown').classList.remove('ltr');
+
+            } else {
+                document.body.classList.add('ltr');
+                document.body.classList.remove('rtl');
+                document.getElementById('language-dropdown').classList.add('ltr'); 
+                document.getElementById('language-dropdown').classList.remove('rtl');
+            }
+
+        }
+        function toggleLogin() {
+            document.querySelector(".container").classList.toggle("show-login");
+        }
+        document.getElementById('language-button').addEventListener('click', function () {
+            const dropdown = document.getElementById('language-dropdown');
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+        });
+
+        document.getElementById('change-lang-en').addEventListener('click', function () {
+            i18next.changeLanguage('en', updateContent);
+            document.getElementById('language-dropdown').style.display = 'none';
+        });
+
+        document.getElementById('change-lang-ar').addEventListener('click', function () {
+            i18next.changeLanguage('ar', updateContent);
+            document.getElementById('language-dropdown').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

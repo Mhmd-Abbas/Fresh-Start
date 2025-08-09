@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg" sizes="32x32" href="./image/logooo.png">
+  <title> Sign Up Page</title>
+  <link rel="stylesheet" href="signup.css">
+  <script src="bundle.js" defer></script>
+</head>
+
+<body class="sign_up_page">
+  <div class="alert" id="success">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Sign up succesful
+  </div>
+  <div class="alert" id="fail">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Sign up failed
+  </div>
+  <div class="alert" id="wait">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    This will take a sec
+  </div>
+  <div class="container">
+    <div class="SignUp-section">
+      <div class="logo">
+        <img src="./image/logooo.png" alt="Logo">
+      </div>
+      <h1 id="title">Join Fresh Start</h1>
+      <form class="SignUp-retired" id="retiredForm" style="display:block;" method="post">
+        <label for="first-name"  id="first-label">First name</label>
+        <input type="text" class="first-name" id="first-name" name="firstName" placeholder="First name" required maxlength="15">
+        <span class="error-message" id="first-name-error"></span>
+
+        <label for="last-name"  id="last-label">Last name:</label>
+        <input type="text" class="last-name" id="last-name" name="lastName" placeholder="Last name" required>
+        <span class="error-message" id="last-name-error"></span>
+
+        <label for="display_name" id="displayname-label">Display name:</label>
+        <input type="text" class="display_name" name="displayName" placeholder="Display name" required>
+        <span class="error-message" id="display_name-error"></span>
+
+        <label for="age"  id="age-label">Age:</label>
+        <input type="number" class="age" id="age" name="age" placeholder="Age" required min="18">
+        <span class="error-message" id="age-error"></span>
+        <label for="gender"id="gender-label"  >Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="" id="select_gender">Select Gender</option>
+          <option value="male" id="male">Male</option>
+          <option value="female" id="female">Female</option>
+        </select>
+        <label for="email" id="email-label">Email Address:</label>
+        <input type="email" id="retired-email" class="retired-emaill" name="email" placeholder="Email Address" required>
+        <span class="error-message" id="email-error"></span>
+
+        <label for="password" id="password-label">Password</label>
+        <input type="password" id="password"  class="password" name="password" placeholder="Password" required>
+        <span class="error-message" id="password-error"></span>
+
+        <label for="confirm-password" id="confirmpassword-label">Confirm Password:</label><br>
+        <input type="password" id="confirm-password" class="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+        <span class="error-message" id="confirm-password-error"></span>
+
+        <label for="interests" id="interests-label">Interests</label>
+                <div class="box" name="box">
+                    <div>
+                      <input type="checkbox" name="Travel" value="Travel">
+                      <label for="Travel" id="travel-label">Travel</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="Food" value="Food">
+                      <label for="Food" id="food-label">Food</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="Tech" value="Tech">
+                      <label for="Tech" id="tech-label">Tech</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="Health" value="Health">
+                      <label for="Health" id="health-label">Health</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="Business" value="Business">
+                      <label for="Business" id="business-label">Business</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="Lifestyle" value="Lifestyle">
+                      <label for="Lifestyle" id="lifestyle-label">Lifestyle</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="Art" value="Art">
+                      <label for="Art" id="art-label">Art</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="News" value="News">
+                      <label for="News" id="news-label">News</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="Gradening" value="Gradening">
+                      <label for="Gradening" id="gardening-label">Gardening</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="Pets" value="Pets">
+                      <label for="Pets" id="pets-label">Pets</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="Professions" value="Professions">
+                      <label for="Professions" id="professions-label">Professions</label>
+                    </div>
+                </div>
+        <button class="SignUp-button2" id="confirm-button">Confirm</button>
+      </form>
+
+    
+      <form class="SignUp-company" id="companyForm" style="display:none;" method="post">
+        <label for="name" id="company-name" >Company Name:</label>
+        <input type="text" id="name" class="name" name="companyName" placeholder="Company Name" required>
+        <span class="error-message" id="company-name-error"></span>
+
+        <label for="industry" id="industry-label">Industry:</label>
+        <input type="text" id="industry" class="industry" name="industry" placeholder="Industry">
+        <span class="error-message" id="industry-error"></span>
+
+
+        <label for="location" id="location-label">Location:</label>
+        <input type="text" id="location"  class="location" name="location" placeholder="location" required>
+        <span class="error-message" id="location-error"></span>
+
+        <label for="email" id="email-labell">Email Address:</label>
+        <input type="email" id="email" name="email" class="email" placeholder="Email Address" required>
+        <span class="error-message" id="companyEmail-error"></span>
+
+        <label for="password"  id="companyPassword-label" >Password:</label>
+        <input type="password" id="companyPassword" class="companyPassword" name="password" placeholder="Password" required minlength="8">
+        <span class="error-message" id="companyPassword-error"></span>
+
+        <label for="confirm-password" id="confirm-companypassword-label">Confirm Password:</label><br>
+        <input type="password" id="confirm-companypassword" class="confirm-companypassword" name="confirm-password" placeholder="Confirm Password"
+          required>
+        <span class="error-message" id="confirm-companypassword-error"></span>
+
+
+        <button class="SignUp-button2" id="confirm-buttonn">Confirm</button>
+      </form>
+      <button class="SignUp-button" id="SignUp-buttonr" onclick="showRetiredForm()">Sign Up as a Retired</button>
+      <button class="SignUp-button"  id="SignUp-buttonc" onclick="showCompanyForm()">Sign Up as a Company</button>
+      <div class="loginp">
+        <p class="signup" id="signup">Already have an account?</p> 
+        <a href="login.html" id="login-link">Log in</a>
+      </div>
+      
+      
+    </div>
+    <div class="illustration-section">
+      <div class="academy">
+        <h3 id="academy-title">Fresh Start</h3>
+        <p id="academy-text">offers resources and training to help retirees acquire new skills and explore life after retirement,
+          fostering a greater sense of fulfillment.</p>
+      </div>
+      <div class="illustration">
+        <img id="signup-image" src="./image/retirees5.jpg" alt="Sign Up Illustration">
+      </div>
+      <div class="icons">
+        <button id="language-button">Translate</button>
+
+        <div id="language-dropdown" class="language-dropdown">
+            <button id="change-lang-en">English</button>
+            <button id="change-lang-ar">عربي</button>
+        </div>
+    </div>
+      <button class="show-SignUp-button" onclick="togglesignUp()">Sign Up</button>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/i18next@21.0.2/i18next.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/i18next-xhr-backend@3.2.0/i18nextXHRBackend.min.js"></script>
+
+  <script>
+       i18next.init({
+          lng: 'en',
+          resources: {
+              en: {
+                  translation: {
+                      "container": {
+                     "title": "Join Fresh Start",
+  "first-name": "First name",
+  "first-label":"First name",
+  "last-name": "Last name",
+  "last-label": "Last name",
+   "displayname-label":"Display name",
+  "display_name": "Display name",
+  "age-label": "Age",
+  "age": "Age",
+  "gender-label": "Gender",
+  "select_gender": "Select Gender",
+  "male": "Male",
+  "female": "Female",
+  "email-label": "Email Address",
+  "retired-emaill": "Email Address",
+  "password": "Password",
+  "password-label":"Password",
+  "confirmpassword-label": "Confirm Password",
+  "confirm-password": "Confirm Password",
+  "interests": "Interests",
+  "confirm": "Confirm",
+  "travel": "Travel",
+  "food": "Food",
+  "tech": "Tech",
+  "health": "Health",
+  "business": "Business",
+  "lifestyle": "Lifestyle",
+  "art": "Art",
+  "news": "News",
+  "gardening": "Gardening",
+  "pets": "Pets",
+  "professions": "Professions",
+  "SignUp-buttonr":"Sign Up as a Retired",
+  "SignUp-buttonc":"Sign Up as a Company",
+  "academy-title": "Fresh Start",
+                "academy-text": "Offers resources and training to help retirees acquire new skills and explore life after retirement, fostering a greater sense of fulfillment.",
+                "language-button": "Translate",
+                "signup": "Already have an account?",
+                "login-link":"Log in",
+              
+                
+
+  
+                     
+
+                      },
+                      "SignUp-company" :{
+                        "company-name": "Company Name:",
+                        "name": "Company Name:",
+        "industry": "Industry:",
+        "location": "Location:",
+        "email": "Email Address:",
+        "companyPassword": "Password:",
+        "confirm-companypassword": "Confirm Password:",
+        "industry-label": "Industry:",
+        "location-label": "Location:",
+        "email-labell": "Email Address:",
+        "companyPassword-label": "Password:",
+        "confirm-companypassword-label": "Confirm Password:",
+
+        "confirm-buttonn": "Confirm",
+       
+                      },
+                  }
+
+              },
+              ar: {
+                  translation: {
+                      "container": {
+                        "title": "انضم إلى بداية جديدة",
+  "first-name": "الاسم الأول",
+  "first-label":"الاسم الأول",
+  "last-name": "الاسم الأخير",
+  "last-label":"الاسم الأخير",
+  "display_name": "اسم العرض",
+  "displayname-label":"اسم العرض",
+  "age-label": "العمر",
+  "age": "العمر",
+
+  "gender-label": "الجنس",
+  "select_gender": "اختر الجنس",
+  "male": "ذكر",
+  "female": "أنثى",
+  "retired-emaill": "عنوان البريد الإلكتروني",
+  "email-label": "عنوان البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "password-label":"كلمة المرور",
+  "confirm-password": "تأكيد كلمة المرور",
+  "confirmpassword-label":  "تأكيد كلمة المرور",
+  "interests": "الاهتمامات",
+  "confirm": "تأكيد",
+  "travel": "السفر",
+  "food": "الطعام",
+  "tech": "التكنولوجيا",
+  "health": "الصحة",
+  "business": "الأعمال",
+  "lifestyle": "أسلوب الحياة",
+  "art": "الفن",
+  "news": "الأخبار",
+  "gardening": "البستنة",
+  "pets": "الحيوانات الأليفة",
+  "professions": "المهن",
+  "SignUp-buttonr":"اشترك كمتقاعد",
+  "SignUp-buttonc":"اشترك كشركة",
+  "academy-title": "بداية جديدة",
+                "academy-text": "يقدم موارد وتدريبات لمساعدة المتقاعدين على اكتساب مهارات جديدة واستكشاف الحياة بعد التقاعد، مما يعزز الشعور بالإنجاز.",
+                "language-button": "ترجمة" ,
+                "signup": "هل لديك حساب بالفعل؟",
+                "login-link":"تسجيل الدخول"
+     
+
+  
+   
+},
+"SignUp-company" :{
+  "company-name": "اسم الشركة:",
+  "name": "اسم الشركة:",
+        "industry": "الصناعة:",
+        "location": "الموقع:",
+        "email": "عنوان البريد الإلكتروني:",
+        "companyPassword": "كلمة المرور:",
+        "confirm-companypassword": "تأكيد كلمة المرور:",
+        "industry-label": "الصناعة:",
+        "location-label": "الموقع:",
+        "email-labell": "عنوان البريد الإلكتروني:",
+        "companyPassword-label": "كلمة المرور:",
+        "confirm-companypassword-label": "تأكيد كلمة المرور:",
+        "confirm-buttonn": "تأكيد",
+        
+},
+                   
+                  }
+              }
+          }
+      }, function (err, t) {
+          if (err) {
+              console.error('Error loading translations:', err);
+             
+
+          } else {
+              updateContent();
+          }
+
+      });
+
+      function updateContent() {
+        
+        document.getElementById("title").textContent = i18next.t('container.title');
+        document.getElementById("first-label").textContent = i18next.t('container.first-label');
+                   
+                    
+                    document.getElementById("last-label").textContent = i18next.t('container.last-label');
+                    document.getElementById("displayname-label").textContent = i18next.t('container.displayname-label');
+                    document.getElementById("age-label").textContent = i18next.t('container.age-label');
+                    document.getElementById("select_gender").textContent = i18next.t('container.select_gender');
+                    document.getElementById("male").textContent = i18next.t('container.male');
+                    document.getElementById("female").textContent = i18next.t('container.female');
+                    document.getElementById("gender-label").textContent = i18next.t('container.gender-label');
+                    document.getElementById("email-label").textContent = i18next.t('container.email-label');
+                    document.getElementById("password-label").textContent = i18next.t('container.password-label');
+                    document.getElementById("confirmpassword-label").textContent = i18next.t('container.confirmpassword-label');
+                    document.getElementById("interests-label").textContent = i18next.t('container.interests');
+                    document.getElementById("confirm-button").textContent = i18next.t('container.confirm');
+
+                    document.getElementById("travel-label").textContent = i18next.t('container.travel');
+                    document.getElementById("food-label").textContent = i18next.t('container.food');
+                    document.getElementById("tech-label").textContent =i18next.t('container.tech');
+                    document.getElementById("health-label").textContent = i18next.t('container.health');
+                    document.getElementById("business-label").textContent = i18next.t('container.business');
+                    document.getElementById("lifestyle-label").textContent = i18next.t('container.lifestyle');
+                    document.getElementById("art-label").textContent = i18next.t('container.art');
+                    document.getElementById("news-label").textContent = i18next.t('container.news');
+                    document.getElementById("gardening-label").textContent = i18next.t('container.gardening');
+                    document.getElementById("pets-label").textContent =  i18next.t('container.pets');
+                    document.getElementById("professions-label").textContent =  i18next.t('container.professions');
+                    document.getElementById("pets-label").textContent =  i18next.t('container.pets');
+                    document.getElementById("SignUp-buttonr").textContent =  i18next.t('container.SignUp-buttonr');
+                    document.getElementById("SignUp-buttonc").textContent =  i18next.t('container.SignUp-buttonc');
+                    document.querySelector('.container .first-name').placeholder = i18next.t('container.first-name');
+                    document.querySelector('.container .last-name').placeholder = i18next.t('container.last-name');
+                    document.querySelector('.container .display_name').placeholder = i18next.t('container.display_name');
+                    
+                   
+                    document.querySelector('.container .age').placeholder = i18next.t('container.age');
+                    document.querySelector('.container .retired-emaill').placeholder = i18next.t('container.retired-emaill');
+                    document.querySelector('.container .password').placeholder = i18next.t('container.password');
+                    document.querySelector('.container .confirm-password').placeholder = i18next.t('container.confirm-password');
+              
+                    document.getElementById('academy-title').textContent = i18next.t('container.academy-title');
+                    document.getElementById('academy-text').textContent = i18next.t('container.academy-text');
+                    document.getElementById('language-button').textContent = i18next.t('container.language-button'); 
+                    document.getElementById("company-name").textContent = i18next.t('SignUp-company.company-name');
+                    document.getElementById("industry-label").textContent = i18next.t('SignUp-company.industry-label');
+                    document.getElementById("location-label").textContent = i18next.t('SignUp-company.location-label');
+                    document.getElementById("email-labell").textContent =  i18next.t('SignUp-company.email-labell');
+                    document.getElementById("companyPassword-label").textContent =  i18next.t('SignUp-company.companyPassword-label');
+                    document.getElementById("confirm-companypassword-label").textContent =  i18next.t('SignUp-company.confirm-companypassword-label');
+                    document.getElementById('signup').textContent = i18next.t('container.signup');
+                   
+                    document.getElementById('login-link').innerText = i18next.t('container.login-link'); 
+
+                    document.getElementById("confirm-buttonn").textContent =  i18next.t('SignUp-company.confirm-buttonn');
+                    document.querySelector('.SignUp-company .name').placeholder = i18next.t('SignUp-company.name');
+                    document.querySelector('.SignUp-company .industry').placeholder = i18next.t('SignUp-company.industry');
+                    document.querySelector('.SignUp-company .location').placeholder = i18next.t('SignUp-company.location');
+                    
+                   
+                    document.querySelector('.SignUp-company .email').placeholder = i18next.t('SignUp-company.email');
+                    document.querySelector('.SignUp-company .companyPassword').placeholder = i18next.t('SignUp-company.companyPassword');
+                    document.querySelector('.SignUp-company .confirm-companypassword').placeholder = i18next.t('SignUp-company.confirm-companypassword');
+                    
+
+
+          if (i18next.language === 'ar') {
+              document.body.classList.add('rtl');
+              document.body.classList.remove('ltr');
+              document.getElementById('language-dropdown').classList.add('rtl'); 
+              document.getElementById('language-dropdown').classList.remove('ltr');
+
+          } else {
+              document.body.classList.add('ltr');
+              document.body.classList.remove('rtl');
+              document.getElementById('language-dropdown').classList.add('ltr'); 
+              document.getElementById('language-dropdown').classList.remove('rtl');
+          }
+
+      }
+      document.getElementById('language-button').addEventListener('click', function () {
+            const dropdown = document.getElementById('language-dropdown');
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+        });
+
+        document.getElementById('change-lang-en').addEventListener('click', function () {
+            i18next.changeLanguage('en', updateContent);
+            document.getElementById('language-dropdown').style.display = 'none';
+        });
+
+        document.getElementById('change-lang-ar').addEventListener('click', function () {
+            i18next.changeLanguage('ar', updateContent);
+            document.getElementById('language-dropdown').style.display = 'none';
+        });
+
+    const retiredForm = document.getElementById('retiredForm');
+    const companyForm = document.getElementById('companyForm');
+
+    function showRetiredForm() {
+      document.getElementById('retiredForm').style.display = 'block';
+      document.getElementById('companyForm').style.display = 'none';
+      document.getElementById('signup-image').src = './image/retirees5.jpg';
+      resetErrorMessages();
+    }
+
+    function showCompanyForm() {
+      document.getElementById('retiredForm').style.display = 'none';
+      document.getElementById('companyForm').style.display = 'block';
+      document.getElementById('signup-image').src = './image/retirees6.jpg';
+      resetErrorMessages();
+    }
+
+    const firstName = document.getElementById('first-name');
+    const firstNameError = document.getElementById('first-name-error');
+    firstName.addEventListener('blur', function () {
+      const nameValue = firstName.value.trim();
+      const nameRegex = /^[A-Za-z]+$/;
+      if (nameValue === '') {
+        firstNameError.textContent = 'First name is required.';
+        firstNameError.style.visibility = 'visible';
+      } else if (!nameRegex.test(nameValue)) {
+        firstNameError.textContent = 'Only letters are allowed.';
+        firstNameError.style.visibility = 'visible';
+      } else if (nameValue.length > 15) {
+        firstNameError.textContent = 'First name cannot exceed 15 characters.';
+        firstNameError.style.visibility = 'visible';
+      } else {
+        firstNameError.style.visibility = 'hidden';
+      }
+    });
+
+
+    const lastName = document.getElementById('last-name');
+    const lastNameError = document.getElementById('last-name-error');
+
+    lastName.addEventListener('blur', function () {
+      const lastNameValue = lastName.value.trim();
+      const nameRegex = /^[A-Za-z]+$/; 
+
+      if (lastNameValue === '') {
+        lastNameError.textContent = 'Last name is required.';
+        lastNameError.style.visibility = 'visible';
+      } else if (!nameRegex.test(lastNameValue)) {
+        lastNameError.textContent = 'Only letters are allowed.';
+        lastNameError.style.visibility = 'visible';
+      } else if (lastNameValue.length > 15) {
+        lastNameError.textContent = 'Last name cannot exceed 15 characters.';
+        lastNameError.style.visibility = 'visible';
+      } else {
+        lastNameError.style.visibility = 'hidden';
+      }
+    });
+
+
+    const email = document.getElementById('retired-email');
+    const emailError = document.getElementById('email-error');
+    email.addEventListener('blur', function () {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (email.value.trim() === '') {
+        emailError.textContent = 'Email is required.';
+        emailError.style.visibility = 'visible';
+      } else if (!emailRegex.test(email.value)) {
+        emailError.textContent = 'Enter a valid email address.';
+        emailError.style.visibility = 'visible';
+      } else {
+        emailError.style.visibility = 'hidden';
+      }
+    });
+
+    const age = document.getElementById('age');
+    const ageError = document.getElementById('age-error');
+    age.addEventListener('blur', function () {
+      if (age.value.trim() === '') {
+        ageError.textContent = 'Age is required.';
+        ageError.style.visibility = 'visible';
+      } else if (parseInt(age.value) < 18) {
+        ageError.textContent = 'Age must be 18 or older.';
+        ageError.style.visibility = 'visible';
+      } else {
+        ageError.style.visibility = 'hidden';
+      }
+    });
+
+    const password = document.getElementById('password');
+    const passwordError = document.getElementById('password-error');
+    password.addEventListener('blur', function () {
+      const passwordValue = password.value.trim();
+      const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+      if (passwordValue === '') {
+        passwordError.textContent = 'Password is required.';
+        passwordError.style.visibility = 'visible';
+      } else if (!passwordRegex.test(passwordValue)) {
+        passwordError.textContent = 'Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character.';
+        passwordError.style.visibility = 'visible';
+      } else {
+        passwordError.style.visibility = 'hidden';
+      }
+    });
+    const confirmPassword = document.getElementById('confirm-password');
+    const confirmPasswordError = document.getElementById('confirm-password-error');
+    confirmPassword.addEventListener('input', function () {
+      if (confirmPassword.value !== password.value) {
+        confirmPasswordError.textContent = 'Passwords do not match!';
+        confirmPasswordError.style.visibility = 'visible';
+      } else {
+        confirmPasswordError.style.visibility = 'hidden';
+      }
+    });
+
+    confirmPassword.addEventListener('blur', function () {
+      if (confirmPassword.value === '') {
+        confirmPasswordError.textContent = 'Please confirm your password.';
+        confirmPasswordError.style.visibility = 'visible';
+      } else if (confirmPassword.value !== password.value) {
+        confirmPasswordError.textContent = 'Passwords do not match!';
+        confirmPasswordError.style.visibility = 'visible';
+      } else {
+        confirmPasswordError.style.visibility = 'hidden';
+      }
+    });
+
+
+
+    const interests = document.querySelectorAll('input[name="Interests"]');
+    interests.forEach(interest => {
+      interest.addEventListener('change', function () {
+        const selectedInterests = document.querySelectorAll('input[name="Interests"]:checked');
+        if (selectedInterests.length === 0) {
+          alert('Please select at least one interest.');
+        }
+      });
+    });
+
+    retiredForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      let isValid = true;
+
+      if (firstName.value.trim() === '') {
+        firstNameError.textContent = 'First name is required.';
+        firstNameError.style.visibility = 'visible';
+        isValid = false;
+      }
+      if (lastName.value.trim() === '') {
+        lastNameError.textContent = 'Last name is required.';
+        lastNameError.style.visibility = 'visible';
+        isValid = false;
+      }
+      if (email.value.trim() === '') {
+        emailError.textContent = 'Email is required.';
+        emailError.style.visibility = 'visible';
+        isValid = false;
+      }
+      if (age.value.trim() === '') {
+        ageError.textContent = 'Age is required.';
+        ageError.style.visibility = 'visible';
+        isValid = false;
+      }
+      if (password.value.trim() === '') {
+        passwordError.textContent = 'Password is required.';
+        passwordError.style.visibility = 'visible';
+        isValid = false;
+      }
+
+
+
+    });
+
+
+    const companyName = document.getElementById('name');
+    const companyNameError = document.getElementById('company-name-error');
+
+    companyName.addEventListener('blur', function () {
+      const nameValue = companyName.value.trim();
+      const nameRegex = /^[A-Za-z\s]+$/; 
+
+      if (nameValue === '') {
+        companyNameError.textContent = 'Company name is required.';
+        companyNameError.style.visibility = 'visible';
+      } else if (!nameRegex.test(nameValue)) {
+        companyNameError.textContent = 'Company name must contain only letters.';
+        companyNameError.style.visibility = 'visible';
+      } else {
+        companyNameError.style.visibility = 'hidden';
+      }
+    });
+
+
+    const industry = document.getElementById('industry');
+    const industryError = document.getElementById('industry-error');
+
+    industry.addEventListener('blur', function () {
+      const industryValue = industry.value.trim();
+      const industryRegex = /^[A-Za-z\s]+$/; 
+
+      if (industryValue === '') {
+        industryError.textContent = 'Industry is required.';
+        industryError.style.visibility = 'visible';
+      } else if (!industryRegex.test(industryValue)) {
+        industryError.textContent = 'Industry must contain only letters.';
+        industryError.style.visibility = 'visible';
+      } else {
+        industryError.style.visibility = 'hidden';
+      }
+    });
+
+    const companyLocation = document.getElementById('location');
+    const locationError = document.getElementById('location-error');
+
+    companyLocation.addEventListener('blur', function () {
+      const locationValue = companyLocation.value.trim();
+      const locationRegex = /^[A-Za-z\s]+$/;  
+
+      if (locationValue === '') {
+        locationError.textContent = 'Location is required.';
+        locationError.style.visibility = 'visible';
+      } else if (!locationRegex.test(locationValue)) {
+        locationError.textContent = 'Location can only contain letters and spaces.';
+        locationError.style.visibility = 'visible';
+      } else {
+        locationError.style.visibility = 'hidden';
+      }
+    });
+
+
+    const companyEmail = document.getElementById('email');
+    const companyEmailError = document.getElementById('companyEmail-error');
+    companyEmail.addEventListener('blur', function () {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (companyEmail.value.trim() === '') {
+        companyEmailError.textContent = 'Email is required.';
+        companyEmailError.style.visibility = 'visible';
+      } else if (!emailRegex.test(companyEmail.value)) {
+        companyEmailError.textContent = 'Enter a valid email address.';
+        companyEmailError.style.visibility = 'visible';
+      } else {
+        companyEmailError.style.visibility = 'hidden';
+      }
+    });
+
+    const companyPassword = document.getElementById('companyPassword');
+    const companyPasswordError = document.getElementById('companyPassword-error');
+    companyPassword.addEventListener('blur', function () {
+      const passwordValue = companyPassword.value.trim();
+      const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+      if (passwordValue === '') {
+        companyPasswordError.textContent = 'Password is required.';
+        companyPasswordError.style.visibility = 'visible';
+      } else if (!passwordRegex.test(passwordValue)) {
+        companyPasswordError.textContent = 'Password must contain at least one letter, one number, one special character, and be at least 8 characters long.';
+        companyPasswordError.style.visibility = 'visible';
+      } else {
+        companyPasswordError.style.visibility = 'hidden';
+      }
+    });
+    const confirmCompanyPassword = document.getElementById('confirm-companypassword');
+    const confirmCompanyPasswordError = document.getElementById('confirm-companypassword-error');
+    confirmCompanyPassword.addEventListener('blur', function () {
+      const passwordValue = companyPassword.value.trim();
+      const confirmPasswordValue = confirmCompanyPassword.value.trim();
+
+      if (confirmPasswordValue === '') {
+        confirmCompanyPasswordError.textContent = 'Please confirm your password.';
+        confirmCompanyPasswordError.style.visibility = 'visible';
+      } else if (confirmPasswordValue !== passwordValue) {
+        confirmCompanyPasswordError.textContent = 'Passwords do not match!';
+        confirmCompanyPasswordError.style.visibility = 'visible';
+      } else {
+        confirmCompanyPasswordError.style.visibility = 'hidden';
+      }
+    });
+
+
+
+    companyForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      let isValid = true;
+
+      if (companyName.value.trim() === '') {
+        companyNameError.textContent = 'Company name is required.';
+        companyNameError.style.visibility = 'visible';
+        isValid = false;
+      }
+
+      if (industry.value.trim() === '') {
+        industryError.textContent = 'Industry is required.';
+        industryError.style.visibility = 'visible';
+        isValid = false;
+      }
+
+      if (companyEmail.value.trim() === '') {
+        companyEmailError.textContent = 'Email is required.';
+        companyEmailError.style.visibility = 'visible';
+        isValid = false;
+      }
+      if (companyLocation.value.trim() === '') {
+        locationError.textContent = 'Location is required.';
+        locationError.style.visibility = 'visible';
+        isValid = false;
+      }
+      if (companyPassword.value.trim() === '') {
+        companyPasswordError.textContent = 'Password is required.';
+        companyPasswordError.style.visibility = 'visible';
+        isValid = false;
+      }
+
+    });
+
+    function resetErrorMessages() {
+      const errorMessages = document.querySelectorAll('.error-message');
+      errorMessages.forEach(message => {
+        message.textContent = '';
+        message.style.visibility = 'hidden';
+      });
+    }
+
+    function togglesignUp() {
+      document.querySelector(".container").classList.toggle("show-SignUp");
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" sizes="32x32" href="./image/logo.png">
+    <title>Volunteer Opportunities - Retirees</title>
+    <link rel="stylesheet" href="volunteer.css">
+    <script src="bundle.js" defer></script>
+</head>
+
+<body>
+
+    <div class="alert" id="success">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Operation succesful
+      </div>
+    
+      <div class="alert" id="fail">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Operation failed
+      </div>
+    
+      <div class="alert" id="fail2">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Please enter a description and an image
+      </div>
+    
+      <div class="alert" id="wait">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        This will take a sec
+      </div>
+
+
+
+    <header class="header">
+        <a href="main2.html" target="_blank" id="main ">
+            <img class="logo-m" src="./image/logo.png" alt="Fresh Start Logo" />
+        </a>
+        <ul class="nav-links">
+            <li><img width="20px" height="20px" src="./image/house-solid.svg" />
+                <a href="community-2.html" id="community-text">Community</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/display-solid.svg" />
+                <a href="work.html" id="work-text">Work</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/leaf-solid.svg" />
+                <a href="volunteer.html" id="volunteer-text">Volunteer</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/hand-holding-medical-solid.svg" />
+                <a href="health.html" id="health-text">Health</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/user-regular.svg" />
+                <a href="Profile.html" id="profile-text">Profile</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/envelope-solid.svg" />
+                <a href="message.html" id="message-text">Message</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/gamepad-solid.svg" />
+                <a href="games.html" id="games-text">Games</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/robot-solid.svg" />
+                <a href="public/AI.html" id="ai-text">AI Fresh Start</a>
+            </li>
+            <li><img width="20px" height="20px" src="./image/form.png" />
+                <a href="forms.html" id="forms-text">Forms</a>
+            </li>
+
+        </ul>
+        <div class="navbar-mobile">
+            <button class="menu-icon">
+                <img width="20px" height="20px" src="./image/bars-menu.svg" />
+            </button>
+            <div class="navbar-list">
+                <ul>
+                    <li><img width="20px" height="20px" src="./image/house-solid.svg" />
+                        <a href="community-2.html" id="community-textm">Community</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/display-solid.svg" />
+                        <a href="work.html" id="work-textm">Work</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/leaf-solid.svg" />
+                        <a href="volunteer.html" id="volunteer-textm">Volunteer</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/hand-holding-medical-solid.svg" />
+                        <a href="health.html" id="health-textm">Health</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/user-regular.svg" />
+                        <a href="Profile.html" id="profile-textm">Profile</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/envelope-solid.svg" />
+                        <a href="message.html" id="message-textm">Message</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/gamepad-solid.svg" />
+                        <a href="games.html" id="games-textm">Games</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/robot-solid.svg" />
+                        <a href="public/AI.html" id="ai-textm">AI Fresh Start</a>
+                    </li>
+                    <li><img width="20px" height="20px" src="./image/form.png" />
+                        <a href="forms.html" id="forms-textm">Forms</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="icons">
+            
+            <img id="language-icon" width="20px" height="20px" src="./image/earth-americas-solid.svg" />
+
+            <div id="language-dropdown" class="language-dropdown">
+                <button id="change-lang-en">English</button>
+                <button id="change-lang-ar">عربي</button>
+            </div>
+        </div>
+        <div class="navbar-container">
+            <div class="search-section">
+                <img width="20px" height="20px" class="profile-pic" src="./image/circle-user-regular.svg"
+                    alt="Profile Picture" onclick="toggleProfileMenu()" />
+
+            </div>
+        </div>
+
+        <div id="profile-menu" class="profile-menu hidden">
+            <div class="profile-header">
+                <a href="Profile.html" target="_blank" id="Profile ">
+                    <img class="profile-pic-large" src="./image/circle-user-regular.svg"  alt="Profile Picture">
+                </a>
+                <span>null</span>
+
+            </div>
+
+            <ul>
+                <li><img width="20px" height="20px" src="./image/gear-solid.svg" /> <a href="settingsprivacy.html"
+                        id="settings-privacy">Settings & privacy</a></li>
+                <li><img width="20px" height="20px" src="./image/circle-question-solid.svg" /><a href="helpsuport.html"
+                        id="help-support">Help & support</a> </li>
+                <li id="display-accessibility" class="accessibility-toggle"><img width="20px" height="20px"
+                        src="./image/moon-solid.svg" /> <span id="display-accessibility-text">Display &
+                        accessibility</span>
+                    <ul id="theme-options" class="theme-options hidden">
+                        <li><button id="light-mode">Off </button></li>
+                        <li><button id="dark-mode">On </button></li>
+                    </ul>
+                </li>
+
+                <li><img width="20px" height="20px" src="./image/right-from-bracket-solid.svg" /><span id="log-out">Log
+                        Out</span></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero" id="volunteer">
+        <div class="post-box">
+            <div class="user-info">
+                <a href="Profile.html">
+                    <img src="./image/circle-user-regular.svg" alt="User Profile">
+                </a>
+                <input type="text" id="placeholderuser" placeholder="What's on your mind, null?">
+            </div>
+            <div class="actions">
+                <button class="photo-video">
+                    <i class="icon">
+                        <img width="20px" height="20px" src="./image/image-solid.svg" />
+                    </i>
+                    <span id="photo">Photo</span>
+                    &nbsp / &nbsp
+                    <i class="icon">
+                        <img width="20px" height="20px" src="./image/video-solid (1).svg" />
+                    </i> 
+                    <span id="video">video</span>
+                </button>
+
+                <button class="feeling-activity">
+                    <i class="icon">
+                        <img width="20px" height="20px" src="./image/face-smile-solid (1).svg" />
+                    </i> 
+                    <span id="feeling-activity">Feeling/activity</span>
+                </button>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 id="introTitle">Make a Difference</h1>
+            <p id="introDescription">Join our community of retirees who are making an impact through volunteering.</p>
+            <img src="./image/volunteer.png" alt="retirees-health" />
+        </div>
+    </section>
+
+    <section id="opportunities" class="opportunities">
+        <h2 id="introTitlev">Available Volunteer Opportunities</h2>
+        <div class="volunteer-cards">
+            <div class="volunteer-card">
+                <img src="./image/Mentorship.jpg" alt="Mentorship for Youth" />
+                <h3 id="titlem">Mentorship for Youth</h3>
+                <p id="descriptionm">Provide guidance and mentorship to the next generation. Share your knowledge and
+                    experience to help
+                    shape young minds.</p>
+            </div>
+            <div class=" volunteer-card">
+                <img src="./image/CommunityOutreach.jpg" alt="Community Outreach" />
+                <h3 id="titlec">Community Outreach</h3>
+                <p id="descriptionc">Help organize community events and activities to foster a sense of belonging and
+                    support within your
+                    neighborhood.</p>
+            </div>
+            <div class="volunteer-card">
+                <img src="./image/EnvironmentalClean-Up.jpg" alt="Environmental Clean-Up" />
+                <h3 id="titlee">Environmental Clean-Up</h3>
+                <p id="descriptione">Participate in environmental conservation projects by cleaning up parks, beaches,
+                    and other natural
+                    spaces.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="filter_tab">
+        <select class="filter" name="filter" required>
+            <option value="Recommended" id="recommended">Recommended</option>
+            <option value="Username" id="username">Username</option>
+            <option value="Description" id="description">Description</option>
+            <option value="Tag" id="tag">Tag</option>
+            <option value="Date" id="date">Date</option>
+        </select>
+
+        <input class="filter_input" type="text">
+
+        <button class="filter_btn" id="apply_filter">Apply fliter</button>
+    </div>
+    <div class="volunteer-section2">
+        <div class="main2">
+            <div class="postcard">
+                <div class="user-name">
+                    <img src="./image/loading.gif" alt="Profile logo" />
+                    <p>Username</p>
+                </div>
+                <p class="description">...</p>
+                <img class="post_media" src=./image/loading.gif alt="post image" />
+                <div class="reacts">
+                    <button class="react-box">
+                        <img width="20px" height="20px" src="./image/heart-regular.svg" alt="like" /><span
+                            id="likeu">Like</span>
+                    </button>
+                    <button id="comment-btn" class="react-box">
+                        <img width="20px" height="20px" src="./image/comment-dots-regular.svg" alt="comment " /><span
+                            id="commentu"> Comment</span>
+                    </button>
+                    <button class="react-box">
+                        <img width="20px" height="20px" src="./image/share-from-square-regular.svg" alt="share" /><span
+                            id="shareu">Share</span>
+                    </button>
+                    <button class="react-box">
+                        <img width="22px" height="22px" src="./image/form.png" alt="share" /><span
+                            id="applyu">Apply</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="comments">
+                <div class="no_comments">
+                    <h2 id="no-comments">No comments</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="main2.html" target="_blank" id="main ">
+                <img class="logo-m" src="./image/logo.png" alt="Fresh Start Logo" />
+            </a>
+            <h3>About Our Website</h3>
+            <p>Our website aims to empower Palestinian retirees by providing job opportunities, social networking, and
+                various services.</p>
+        </div>
+        <div class="social-links">
+            <h3>Contact Us</h3>
+
+            <a href="https://www.facebook.com/share/18qFb2vq4D/?mibextid=wwXIfr" target="_blank" id="facebook-link">
+                <img width="30px" height="30px" src="./image/facebok.svg" alt="Facebook" />
+            </a>
+            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Ffreshstart711%3Figsh%3DMTZ4OGMyb3E0MXNnOA%253D%253D%26utm_source%3Dqr%26fbclid%3DIwZXh0bgNhZW0CMTAAAR2r0fx9LLiAzqsMO1X7RsCbayOU10VS6YNh9kW02dlbFE-3lXSLDHBPyVI_aem_gN11Kb32_B0vahI5hJynFQ&h=AT3aD1DlPBrs-KThdG7kMpUs5n5eu0flzb0EfGOEsPV4X7pppwo8vPtRckDf3dtXcyrGtHFhcmepicZb3BXEt7wQlGHLBuPpgQSc89QjqDyMrrBaNjRWa3U2zJT9Oa5ZO6tgWg" target="_blank" id="instagram-link">
+                <img width="30px" height="30px" src="./image/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" id="linkedin-link">
+                <img width="30px" height="30px" src="./image/linkedin.svg" alt="LinkedIn" />
+            </a>
+        </div>
+        <div class="feedback">
+            <p>Your opinion matters to us! Tell us how we can improve our services</p>
+            <button id="feedback-btn" onclick="showFeedbackForm()">Feedback</button>
+            <div id="feedback-form" class="hidden">
+                <textarea placeholder="Write your feedback here..."></textarea>
+                <button onclick="submitFeedback()">Submit</button>
+            </div>
+        </div>
+    </footer>
+
+    <div class="blurr">
+    </div>
+
+    <div class="loading">
+        <img height="45%" width="30%" src="image/loading.gif">
+    </div>
+
+    <div class="make_comment_tab">
+        <h3 class="comment_title" id="comment_title">Comment text:</h3>
+        <textarea class="comment_text2" placeholder="text" id="placeholdert"></textarea>
+
+        <button class="make_comment_btn" id="make_comment_btn">Comment</button>
+        <button class="make_comment_cancel" id="make_comment_cancel">Cancel</button>
+    </div>
+    <div class="make_post_tab">
+        <h3 class="desc-title" id="post-desc-title">Post description:</h3>
+        <textarea class="post_desc" placeholder="Description"></textarea>
+    
+        <img class="post_img" src=" ">
+        <video class="post_vid" src=" "></video>
+        
+        <input class="img_input" type="file" accept=".jpg, .png, .jpeg .mp4">
+    
+        <h4 class="tag-title" id="post-tag-title">Post tag:</h4>
+    
+        <select id="tag" class="tag-value" name="tag" required>
+            <option value="none" id="select-tag" >Select tag</option>
+            <option value="travel" id="travel" >Travel</option>
+            <option value="food" id="food">Food</option>
+            <option value="tech" id="tech">Tech</option>
+            <option value="health" id="health">Health</option>
+            <option value="business" id="business">Business</option>  
+            <option value="lifestyle" id="lifestyle">Lifestyle</option>
+            <option value="art" id="art">Art</option>
+            <option value="news"  id="news">News</option>
+            <option value="gradening" id="gardening">Gradening</option> 
+            <option value="pets" id="pets">Pets</option>
+            <option value="professions" id="professions">Professions</option> 
+        </select>
+        <br>
+    
+        <h4 class="page-title" id="page-titlep">Post on
+          <select id="page" class="page-value" name="page" required>
+            <option value="community" id="community">Community</option>
+            <option value="volunteer" id="volunteer">Volunteer</option>
+    
+          </select>
+          <span id="Page-text">Page</span>
+        </h4>
+    
+        <button class="post_btn" id="post-btn">Post</button>
+        <button class="post_cancel" id="post-cancel">Cancel</button>
+    </div>
+
+    <div class="apply_tab">
+        <form id="voluunteerForm" class="form active">
+            <h2 id="volunteer-form">Volunteer Form</h2>
+            <label for="volunteer-name" id="full-name">Full Name</label>
+            <input type="text" id="volunteer-name" name="name" required>
+
+            <label for="volunteer-email" id="emailv">Email Address</label>
+            <input type="email" id="volunteer-email" name="email" required>
+
+            <label for="volunteer-phone" id="phonev">Phone Number</label>
+            <input type="tel" id="volunteer-phone" name="phone" required>
+
+            <label for="volunteer-date" id="datev">Date of birth (mm-dd-yyyy) </label>
+            <input type="date" id="volunteer-Date" name="date" required>
+
+            <label for="volunteer-emergency" id="emergencyv">Emergency Contact Name & Phone</label>
+            <input type="text" id="volunteer-emergency" name="emergency" required>
+
+            <button class="apply_btn" id="submit-volunteer">Submit</button>
+
+            <button class="cancel_apply_btn" id="cancelv">Cancel</button>
+        </form>
+    </div>
+        
+    <div class="main3">
+        <div class="postcard2">
+            <div class="user-name">
+                <img src="./image/loading.gif" alt="Profile logo" />
+                <p>Username</p>
+            </div>
+            <p class="description2" disabled>...</p>
+            <img height="65%" width="100%" class="post_media2" src=./image/loading.gif alt="post image" />
+            <video height="65%" width="100%" class="post_media3" controls alt="post image">
+        </div>
+
+        <div class="comments2" id="comments2">
+            <div class="no_comments" id="no_comments2">
+                <h2>No comments</h2>
+            </div>
+        </div>
+
+        <img class="close_btn" width="30px" height="30px" src="./image/close-lg-svgrepo-com.svg" />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.0.2/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-xhr-backend@3.2.0/i18nextXHRBackend.min.js"></script>
+    <script>
+        i18next.init({
+            lng: 'en',
+            resources: {
+                en: {
+                    translation: {
+                        "header": {
+                            "community": "Community",
+                            "work": "Work",
+                            "volunteer": "Volunteer",
+                            "health": "Health",
+                            "profile": "Profile",
+                            "message": "Message",
+                            "games": "Games",
+                            "ai": "AI Fresh Start",
+                            "forms": "Forms",
+                            "settings-privacy": "Settings & privacy",
+                            "help-support": "Help & support",
+                            "display-accessibility-text": "Display & accessibility",
+                            "light-mode": "Off",
+                            "dark-mode": "On",
+                            "log-out": "Log Out"
+                        },
+                        "post-box": {
+                            "placeholderuser": "What's on your mind ?",
+                            "video": "Video",
+                            "photo": "Photo",
+                            "feeling-activity": "Feeling/Activity"
+                        }, "hero-content": {
+                            "introTitle": "Make a Difference",
+                            "introDescription": "Join our community of retirees who are making an impact through volunteering."
+                        },
+                        "navbar-list": {
+                            "community": "Community",
+                            "work": "Work",
+                            "volunteer": "Volunteer",
+                            "health": "Health",
+                            "profile": "Profile",
+                            "message": "Message",
+                            "games": "Games",
+                            "ai": "AI Fresh Start",
+                            "forms": "Forms"
+                        },
+                        "make_post_tab": {
+              "post-desc-title": "Post description",
+              "description-placeholder": "Description",
+              "post-tag-title": "Post tag",
+              "select-tag": "Select tag",
+              "travel": "Travel",
+              "food": "Food",
+              "tech": "Tech",
+              "health": "Health",
+              "business": "Business",
+              "lifestyle": "Lifestyle",
+              "art": "Art",
+              "news": "News",
+              "gardening": "Gardening",
+              "pets": "Pets",
+              "professions": "Professions",
+              "post-btn": "Post",
+              "post-cancel": "Cancel",
+              "page-titlep": "Post on",
+              "community": "Community",
+              "volunteer": "Volunteer",
+              "Page-text": "Page"
+            },
+            "filter_tab":{
+                            
+                            "recommended": "Recommended",
+                            "username": "Username",
+                            "description": "Description",
+                            "tag": "Tag",
+                            "date": "Date",
+                            "apply_filter": "Apply filter"
+                        
+                                                },
+                        "volunteer-cards": {
+
+                            "titlem": "Mentorship for Youth",
+                            "titlec": "Community Outreach",
+                            "titlee": "Environmental Clean-Up",
+                            "descriptionm": "Provide guidance and mentorship to the next generation. Share your knowledge and experience to help shape young minds.",
+                            "descriptionc": "Help organize community events and activities to foster a sense of belonging and support within your neighborhood.",
+                            "descriptione": "Participate in environmental conservation projects by cleaning up parks, beaches, and other natural spaces."
+                        },
+
+                        "opportunities": {
+                            "introTitlev": "Available Volunteer Opportunities"
+                        },
+                        "reacts": {
+                            "likeu": "Like",
+                            "commentu": "Comment",
+                            "shareu": "Share",
+                            "applyu": "Apply"
+                        },
+                        "no_comments": {
+                            "no-comments": "No Comments"
+                        },
+                        "make_comment_tab": {
+                            "comment_title": "Comment text",
+                            "placeholdert": "text",
+                            "make_comment_btn": "Comment",
+                            "make_comment_cancel": "Cancel"
+                        },
+
+                        "apply_tab": {
+                            "volunteer-form": "Volunteer Form",
+                            "full-name": "Full Name",
+                            "emailv": "Email",
+                            "phonev": "Phone Number",
+
+                            "datev": "Date of Birth (mm-dd-yyyy)",
+                            "emergencyv": "Emergency Contact Name & Phone",
+                            "submit-volunteer": "Submit",
+                            "cancelv": "Cancel"
+                        },
+                        "footer": {
+                            "about_title": "About Our Website",
+                            "about_text": "Our website aims to empower Palestinian retirees by providing job opportunities, social networking, and various services.",
+                            "contact_title": "Contact Us",
+                            "facebook_alt": "Facebook",
+                            "instagram_alt": "Instagram",
+                            "linkedin_alt": "LinkedIn",
+                            "feedback_text": "Your opinion matters to us! Tell us how we can improve our services",
+                            "feedback_btn": "Feedback",
+                            "feedback_placeholder": "Write your feedback here...",
+                            "feedback_submit_btn": "Submit"
+                        }
+
+
+                    }
+
+                },
+                ar: {
+                    translation: {
+                        "header": {
+                            "community": "المجتمع",
+                            "work": "العمل",
+                            "volunteer": "التطوع",
+                            "health": "الصحة",
+                            "profile": "الملف الشخصي",
+                            "message": "الرسائل",
+                            "games": "الألعاب",
+                            "ai": "الذكاء الاصطناعي",
+                            "forms": "نماذج",
+                            "settings-privacy": "الإعدادات والخصوصية",
+                            "help-support": "المساعدة والدعم",
+                            "display-accessibility-text": "العرض وإمكانية الوصول",
+                            "light-mode": "إيقاف",
+                            "dark-mode": "تشغيل",
+
+                            "log-out": "تسجيل الخروج"
+                        },
+                        "post-box": {
+                            "placeholderuser": "ماذا يدور في ذهنك؟",
+                            "video": "فيديو",
+                            "photo": "صورة",
+                            "feeling-activity": "شعور/نشاط"
+                        },
+                        "make_post_tab": {
+              "post-desc-title": "وصف المنشور",
+              "description-placeholder": "وصف",
+              "post-tag-title": "عنوان الوسم",
+              "select-tag": "اختر الوسم",
+              "travel": "سفر",
+              "food": "طعام",
+              "tech": "تكنولوجيا",
+              "health": "صحة",
+              "business": "أعمال",
+              "lifestyle": "نمط حياة",
+              "art": "فن",
+              "news": "أخبار",
+              "gardening": "زراعة",
+              "pets": "حيوانات أليفة",
+              "professions": "مهن",
+              "post-btn": "نشر",
+              "post-cancel": "إلغاء",
+              "page-titlep": "انشر في صفحة",
+              "community": "المجتمع",
+              "volunteer": "التطوع",
+              "Page-text": "الصفحة"
+
+            },
+                        "navbar-list": {
+                            "community": "المجتمع",
+                            "work": "العمل",
+                            "volunteer": "التطوع",
+                            "health": "الصحة",
+                            "profile": "الملف الشخصي",
+                            "message": "الرسائل",
+                            "games": "الألعاب",
+                            "ai": "الذكاء الاصطناعي",
+                             "forms": "نماذج"
+                        },
+                        "volunteer-cards": {
+
+                            "titlem": "الإرشاد للشباب",
+                            "titlec": "التواصل المجتمعي",
+                            "titlee": "تنظيف البيئة",
+                            "descriptionm": "قدم التوجيه والإرشاد للجيل القادم. شارك معرفتك وخبرتك للمساعدة في تشكيل العقول الشابة.",
+                            "descriptionc": "ساعد في تنظيم الفعاليات والأنشطة المجتمعية لتعزيز روح الانتماء والدعم داخل حيّك.",
+                            "descriptione": "شارك في مشاريع الحفاظ على البيئة من خلال تنظيف الحدائق والشواطئ والمناطق الطبيعية الأخرى."
+
+
+                        },
+
+                        "hero-content": {
+                            "introTitle": "اصنع فرقاً",
+                            "introDescription": "انضم إلى مجتمع المتقاعدين لدينا الذين يحققون تأثيراً من خلال التطوع."
+                        },
+                        "opportunities": {
+                            "introTitlev": "فرص التطوع المتاحة"
+                        },
+                        "no_comments": {
+                            "no-comments": "لا يوجد تعلقات"
+                        },
+                        "filter_tab":{
+                            "recommended": "موصى به",
+    "username": "اسم المستخدم",
+    "description": "الوصف",
+    "tag": "الوسم",
+    "date": "التاريخ",
+    "apply_filter": "تطبيق الفلتر"
+                        },
+                        "reacts": {
+                            "likeu": "أعجبني",
+                            "commentu": "تعليق",
+                            "shareu": "مشاركة",
+                            "applyu": "تقديم طلب"
+                        },
+                        "make_comment_tab": {
+                            "comment_title": "نص التعليق:",
+                            "placeholdert": "النص",
+                            "make_comment_btn": "تعليق",
+                            "make_comment_cancel": "إلغاء"
+                        },
+                        "apply_tab": {
+                            "volunteer-form": "نموذج التطوع",
+                            "full-name": "الاسم الكامل",
+                            "emailv": "البريد الإلكتروني",
+                            "phonev": "رقم الهاتف",
+
+                            "datev": "تاريخ الميلاد (شهر-يوم-سنة)",
+                            "emergencyv": "اسم ورقم الهاتف للطوارئ",
+                            "submit-volunteer": "إرسال",
+                            "cancelv": "إلغاء"
+                        },
+                        "footer": {
+                            "about_title": "عن موقعنا",
+                            "about_text": "يهدف موقعنا إلى تمكين المتقاعدين الفلسطينيين من خلال توفير فرص عمل، والتواصل الاجتماعي، وخدمات متنوعة.",
+                            "contact_title": "اتصل بنا",
+                            "facebook_alt": "فيسبوك",
+                            "instagram_alt": "إنستجرام",
+                            "linkedin_alt": "لينكدإن",
+                            "feedback_text": "رأيك مهم بالنسبة لنا! أخبرنا كيف يمكننا تحسين خدماتنا",
+                            "feedback_btn": "ملاحظات",
+                            "feedback_placeholder": "اكتب ملاحظاتك هنا...",
+                            "feedback_submit_btn": "إرسال"
+                        }
+                    }
+                }
+            }
+        }, function (err, t) {
+            if (err) {
+                console.error('Error loading translations:', err);
+                console.log(i18next.t('make_post_tab.post-desc-title'));
+
+            } else {
+                updateContent();
+            }
+
+        });
+
+        function updateContent() {
+            document.getElementById('community-text').textContent = i18next.t('header.community');
+            document.getElementById('work-text').textContent = i18next.t('header.work');
+            document.getElementById("volunteer-text").textContent = i18next.t('header.volunteer');
+            document.getElementById("health-text").textContent = i18next.t('header.health');
+            document.getElementById("profile-text").textContent = i18next.t('header.profile');
+            document.getElementById("message-text").textContent = i18next.t('header.message');
+            document.getElementById("games-text").textContent = i18next.t('header.games');
+            document.getElementById("ai-text").textContent = i18next.t('header.ai');
+            document.getElementById("forms-text").textContent = i18next.t('header.forms');
+            document.getElementById('settings-privacy').textContent = i18next.t('header.settings-privacy');
+            document.getElementById('help-support').textContent = i18next.t('header.help-support');
+            document.getElementById('display-accessibility-text').textContent = i18next.t('header.display-accessibility-text');
+            document.getElementById('light-mode').textContent = i18next.t('header.light-mode');
+            document.getElementById('dark-mode').textContent = i18next.t('header.dark-mode');
+
+            document.getElementById('log-out').textContent = i18next.t('header.log-out');
+            document.getElementById('community-textm').textContent = i18next.t('navbar-list.community');
+            document.getElementById('work-textm').textContent = i18next.t('navbar-list.work');
+            document.getElementById("volunteer-textm").textContent = i18next.t('navbar-list.volunteer');
+            document.getElementById("health-textm").textContent = i18next.t('navbar-list.health');
+            document.getElementById("profile-textm").textContent = i18next.t('navbar-list.profile');
+            document.getElementById("message-textm").textContent = i18next.t('navbar-list.message');
+            document.getElementById("games-textm").textContent = i18next.t('navbar-list.games');
+            document.getElementById("ai-textm").textContent = i18next.t('navbar-list.ai');
+            document.getElementById("forms-textm").textContent = i18next.t('navbar-list.forms');
+
+            document.querySelector('.footer .footer-logo h3').textContent = i18next.t('footer.about_title');
+            document.querySelector('.footer .footer-logo p').textContent = i18next.t('footer.about_text');
+            document.querySelector('.footer .social-links h3').textContent = i18next.t('footer.contact_title');
+
+
+            document.getElementById('facebook-link').querySelector('img').alt = i18next.t('footer.facebook_alt');
+            document.getElementById('instagram-link').querySelector('img').alt = i18next.t('footer.instagram_alt');
+            document.getElementById('linkedin-link').querySelector('img').alt = i18next.t('footer.linkedin_alt');
+
+
+            document.querySelector('.footer .feedback p').textContent = i18next.t('footer.feedback_text');
+            document.getElementById('feedback-btn').textContent = i18next.t('footer.feedback_btn');
+            document.querySelector('.footer .feedback textarea').placeholder = i18next.t('footer.feedback_placeholder');
+            document.querySelector('.footer .feedback button').textContent = i18next.t('footer.feedback_submit_btn');
+            document.querySelector('.post-box input').placeholder = i18next.t('post-box.placeholderuser');
+
+            document.getElementById('video').textContent = i18next.t('post-box.video');
+            document.getElementById('photo').textContent = i18next.t('post-box.photo');
+            document.getElementById('feeling-activity').textContent = i18next.t('post-box.feeling-activity');
+            document.getElementById('introTitle').textContent = i18next.t('hero-content.introTitle');
+            document.getElementById('introDescription').textContent = i18next.t('hero-content.introDescription');
+            document.getElementById('introTitlev').textContent = i18next.t('opportunities.introTitlev');
+            
+
+            document.getElementById('volunteer-form').textContent = i18next.t('apply_tab.volunteer-form');
+            document.getElementById('emailv').textContent = i18next.t('apply_tab.emailv');
+            document.getElementById('phonev').textContent = i18next.t('apply_tab.phonev');
+            document.getElementById('submit-volunteer').textContent = i18next.t('apply_tab.submit-volunteer');
+            document.getElementById('datev').textContent = i18next.t('apply_tab.datev');
+            document.getElementById('emergencyv').textContent = i18next.t('apply_tab.emergencyv');
+
+            document.getElementById('full-name').textContent = i18next.t('apply_tab.full-name');
+            document.getElementById('cancelv').textContent = i18next.t('apply_tab.cancelv');
+          
+            document.getElementById('comment_title').textContent = i18next.t('make_comment_tab.comment_title');
+            document.getElementById('placeholdert').setAttribute('placeholder', i18next.t('make_comment_tab.placeholdert'));
+            document.getElementById('make_comment_btn').textContent = i18next.t('make_comment_tab.make_comment_btn');
+            document.getElementById('make_comment_cancel').textContent = i18next.t('make_comment_tab.make_comment_cancel');
+            document.getElementById('titlem').textContent = i18next.t('volunteer-cards.titlem');
+            document.getElementById('descriptionm').textContent = i18next.t('volunteer-cards.descriptionm');
+            document.getElementById('titlec').textContent = i18next.t('volunteer-cards.titlec');
+            document.getElementById('descriptionc').textContent = i18next.t('volunteer-cards.descriptionc');
+            document.getElementById('titlee').textContent = i18next.t('volunteer-cards.titlee');
+            document.getElementById('descriptione').textContent = i18next.t('volunteer-cards.descriptione');
+            document.getElementById('post-desc-title').textContent = i18next.t('make_post_tab.post-desc-title');
+      document.getElementById('post-tag-title').textContent = i18next.t('make_post_tab.post-tag-title');
+      document.getElementById('select-tag').textContent = i18next.t('make_post_tab.select-tag');
+      document.getElementById('travel').textContent = i18next.t('make_post_tab.travel');
+      document.getElementById('food').textContent = i18next.t('make_post_tab.food');
+      document.getElementById('tech').textContent = i18next.t('make_post_tab.tech');
+      document.getElementById('health').textContent = i18next.t('make_post_tab.health');
+      document.getElementById('business').textContent = i18next.t('make_post_tab.business');
+      document.getElementById('lifestyle').textContent = i18next.t('make_post_tab.lifestyle');
+      document.getElementById('art').textContent = i18next.t('make_post_tab.art');
+      document.getElementById('news').textContent = i18next.t('make_post_tab.news');
+      document.getElementById('gardening').textContent = i18next.t('make_post_tab.gardening');
+      document.getElementById('pets').textContent = i18next.t('make_post_tab.pets');
+      document.getElementById('professions').textContent = i18next.t('make_post_tab.professions');
+      document.getElementById('post-btn').textContent = i18next.t('make_post_tab.post-btn');
+      document.getElementById('post-cancel').textContent = i18next.t('make_post_tab.post-cancel');
+      document.getElementById('post-cancel').textContent = i18next.t('make_post_tab.post-cancel');
+      document.getElementById('recommended').textContent = i18next.t('filter_tab.recommended');
+      document.getElementById('username').textContent = i18next.t('filter_tab.username');
+      document.getElementById('description').textContent = i18next.t('filter_tab.description');
+      document.getElementById('tag').textContent = i18next.t('filter_tab.tag');
+      document.getElementById('date').textContent = i18next.t('filter_tab.date');
+      document.getElementById('apply_filter').textContent = i18next.t('filter_tab.apply_filter');
+    
+
+
+
+            if (i18next.language === 'ar') {
+                document.body.classList.add('rtl');
+                document.body.classList.remove('ltr');
+                document.getElementById('language-dropdown').classList.add('rtl');
+                document.getElementById('language-dropdown').classList.remove('ltr');
+
+            } else {
+                document.body.classList.add('ltr');
+                document.body.classList.remove('rtl');
+                document.getElementById('language-dropdown').classList.add('ltr');
+                document.getElementById('language-dropdown').classList.remove('rtl');
+            }
+
+        }
+
+
+        document.getElementById('language-icon').addEventListener('click', function () {
+            const dropdown = document.getElementById('language-dropdown');
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+        });
+
+        document.getElementById('change-lang-en').addEventListener('click', function () {
+            i18next.changeLanguage('en', updateContent);
+            document.getElementById('language-dropdown').style.display = 'none';
+        });
+
+        document.getElementById('change-lang-ar').addEventListener('click', function () {
+            i18next.changeLanguage('ar', updateContent);
+            document.getElementById('language-dropdown').style.display = 'none';
+        });
+
+
+        function showFeedbackForm() {
+            document.getElementById("feedback-form").classList.toggle("hidden");
+            document.getElementById("feedback-btn").classList.add("hidden");
+        }
+
+        function submitFeedback() {
+            alert("Thank you for your feedback!");
+            document.getElementById("feedback-form").classList.add("hidden");
+            document.getElementById("feedback-btn").classList.remove("hidden");
+
+        }
+        function toggleProfileMenu() {
+            const menu = document.getElementById('profile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+
+        document.addEventListener('click', (event) => {
+            const menu = document.getElementById('profile-menu');
+            const profilePic = document.querySelector('.profile-pic');
+            if (!menu.contains(event.target) && event.target !== profilePic) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        const accessibilityMenu = document.querySelector(".accessibility-toggle");
+        const themeOptions = document.querySelector(".theme-options");
+        const lightModeButton = document.getElementById("light-mode");
+        const darkModeButton = document.getElementById("dark-mode");
+
+
+        if (localStorage.getItem("theme") === "light") {
+            document.body.style.background = "var(--background-light)";
+            document.body.style.color = "var(--text-light)";
+
+            document.querySelectorAll(".post-box").forEach((box) => {
+                box.style.background = "var(--post-background-light)";
+                box.style.color = "var(--text-light)";
+            });
+        } else {
+            document.body.style.background = "var(--background-dark)";
+            document.body.style.color = "var(--text-dark)";
+
+            document.querySelectorAll(".post-box").forEach((box) => {
+                box.style.background = "var(--post-background-dark)";
+                box.style.color = "var(--text-dark)";
+            });
+        }
+
+
+        accessibilityMenu.addEventListener("click", () => {
+            themeOptions.classList.toggle("hidden");
+        });
+
+
+        lightModeButton.addEventListener("click", () => {
+            document.body.style.background = "var(--background-light)";
+            document.body.style.color = "var(--text-light)";
+
+            document.querySelectorAll(".post-box").forEach((box) => {
+                box.style.background = "var(--post-background-light)";
+                box.style.color = "var(--text-light)";
+            });
+
+            localStorage.setItem("theme", "light");
+            themeOptions.classList.add("hidden");
+        });
+
+
+        darkModeButton.addEventListener("click", () => {
+            document.body.style.background = "var(--background-dark)";
+            document.body.style.color = "var(--text-dark)";
+
+            document.querySelectorAll(".post-box").forEach((box) => {
+                box.style.background = "var(--post-background-dark)";
+                box.style.color = "var(--text-dark)";
+            });
+            localStorage.setItem("theme", "dark");
+            themeOptions.classList.add("hidden");
+        });
+
+    </script>
+</body>
+
+</html>
