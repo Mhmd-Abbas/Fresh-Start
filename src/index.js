@@ -8,15 +8,6 @@ import { getFirestore, collection, getDocs,
         } from "firebase/firestore";
 import { v4 } from "uuid";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyDlVS-rpIt5-aDk80o1h-g_0pGGOH0_goA",
-    authDomain: "fresh-start-3f593.firebaseapp.com",
-    projectId: "fresh-start-3f593",
-    storageBucket: "fresh-start-3f593.firebasestorage.app",
-    messagingSenderId: "134696167227",
-    appId: "1:134696167227:web:d6e180b6848dce41a5b91e"
-  };
-
 // tools initialization
 const app = initializeApp(firebaseConfig)
 const db = getFirestore()
