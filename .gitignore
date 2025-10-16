@@ -1,5 +1,2 @@
 .env
-package.json
-package-lock.json
-webpack.config.js
 node_modules/
